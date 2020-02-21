@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url(/fonts/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url(/fonts/Roboto-Regular.ttf);
+}
+
+.center-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.title__banner-name {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+.header {
+    background-color: white;
+}
+
+
+.container {
+    background-color: white;
+    margin: 0 auto;
+    height: auto;
+}
+
+.separator {
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.section__banner .banner__first {
+    position: relative;
+    width: 100%;
+}
+
+.section__banner .banner__first span {
+    position: absolute;
+    left: 220px;
+    top: 40px;
+}
+
+.section__best-offer_info .subtitle {
+    font-family: "Times New Roman", sans-serif;
+    font-style: italic;
+    text-align: center;
+}
+
+
+
+.item__picture {
+    margin: 30px 0;
+}
+
+
+.item__info {
+    text-align: center;
+}
+
+.item__arrow {
+    border: solid #f14a58;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 4px;
+
+}
+
+.item__arrow_up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.item__arrow_down {
+    margin: 30px 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.section__best-offer_items_grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+}
+
+
+
+.section__best-offer_items-price .items-price_old {
+    font-family: 'Roboto', sans-serif;
+    color: #757575;
+    font-size: 18px;
+}
+
+.section__best-offer_items-price .items-price_new {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.item__addition-sign {
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.item__info .item__title {
+    font-weight: bold;
+}
+
+
+/*
+
+.header nav {
+
+}
+
+.header ul {
+    list-style: none;
+    overflow: hidden;
+}
+
+.header li a {
+
+    color: black;
+    text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    color: black;
+}
+
+.header .logo {
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+.header .menu {
+
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+
+}
+
+.header .menu-icon .navicon {
+    background: black;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 14px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: black;
+
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+!* menu btn *!
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 300px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+
+    background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    background: #f14a58;
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    background: #f14a58;
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before,
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+
+    top: 0;
+}
+
+
+
+
+@media (min-width: 800px) {
+
+    .header li {
+        float: left;
+    }
+
+
+    .header .menu {
+        margin-top: 50px;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }}
+*/
+@media only screen and  (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .title {
+        font-size: 26px;
+        margin-top: 55px;
+        margin-bottom: 30px;
+    }
+
+    .section__best-offer_info .subtitle {
+        font-size: 14px;
+        line-height: 30px;
+        margin-bottom: 75px;
+    }
+
+    .section__best-offer_items_grid-container .item__title {
+        margin-bottom: 15px;
+        font-size: 12px;
+    }
+
+    .section__best-offer_items_grid-container .item__price {
+        font-size: 12px;
+    }
+
+    .title__banner-name {
+        font-size: 26px;
+    }
+}
