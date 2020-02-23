@@ -7,56 +7,60 @@
     <title>Start</title>
 </head>
 <body>
-<!--<div class="container">
+
 <header class="header">
+    <div class="header__content container">
+        <div class="header__content_bag">
+            <div><a href="" class="logo">Template</a></div>
+            <div>
+                <span class="header__content_bag-sing-up">E-mail sing up</span>
+                <span> <img src="img/start_page/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon">  Bag (0) </span>
+            </div>
 
-    <nav>
-        <a href="" class="logo">TL</a>
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-        <ul class="menu">
-            <li>
-                <a class="active " href="#" >Home</a>
-            </li >
-            <li>
-                <a href="#">Women</a>
-            </li >
-            <li>
-                <a href="#">Men</a>
-            </li >
-            <li>
-                <a href="#">Handbags</a>
-            </li>
-            <li>
-                <a href="#">Accessories</a>
-            </li>
-            <li>
-                <a href="#">Sale</a>
-            </li>
-            <li>
-                <a href="#">New Arrivals</a>
-            </li>
-            <li>
-                <a href="#">Clearance</a>
-            </li>
-            <li>
-                <a href="#">Store Locator</a>
-            </li>
+        </div>
+    </div>
+    <div class="header__content_menu container">
+        <nav>
+            <input class="menu-btn" type="checkbox" id="menu-btn"/>
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+                <li><a class="active " href="#">Home</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Handbags</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Sale</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Clearance</a></li>
+                <li><a href="#">Store Locator</a></li>
+            </ul>
+        </nav>
 
-        </ul>
-    </nav>
+        <div class="header__content_menu_search">
+
+            <input type="text" value="" placeholder="Style Name" id="searchBar" class="menu_search_input">
+            <button class="menu_search_button"><img src="img/start_page/icons/search.svg" alt="bag"
+                                                    class="menu_search_button_img"></button>
+
+        </div>
+    </div>
+    </div>
 </header>
-</div>-->
 <div class="separator"></div>
 
 <main>
     <section class="section__banner">
         <div class="banner__first">
-            <img src="img/start_page/nike.jpeg" alt="red_nike">
+            <img src="img/banner_1.jpeg" alt="red_nike" class="banner__img">
             <span class="title__banner-name">Nike Red</span>
         </div>
-        <div class="banner__second"></div>
+        <div class="banner__second">
+            <img src="img/banner_2.jpeg" alt="Caps & Hats" class="banner__img">
+            <span class="title__banner-name">Caps & Hats</span>
+            <p class="subtitle__banner-name">Sale -50%</p>
+        </div>
     </section>
+
     <div class="separator"></div>
 
     <section class="section__best-offer container">
@@ -72,39 +76,219 @@
         <div class=" section__best-offer_items_grid-container ">
             <div class="item center-column">
                 <span class="item__arrow item__arrow_up"></span>
-                <img src="img/start_page/item_1.jpeg" alt="Only Skinny Jeans" class="item__picture">
+                <img src="img/skinny_jeans.jpeg" alt="Only Skinny Jeans" class="item__picture">
                 <div class="item__info">
                     <p class="item__title">Only Skinny Jeans</p>
                     <p class="item__price">£65.50</p></div>
                 <span class="item__arrow item__arrow_down"></span>
             </div>
 
-            <div class="item">
-                <span class="item__addition-sign">+</span>
+            <div class="item__addition-sign ">
+                +
             </div>
 
             <div class="item center-column">
                 <span class="item__arrow item__arrow_up"></span>
-                <img src="img/start_page/item_2.jpeg" alt="Levi’s Jeans for women" class="item__picture">
+                <img src="img/levis.jpeg" alt="Levi’s Jeans for women" class="item__picture">
                 <div class="item__info">
                     <p class="item__title">Levi’s Jeans for women</p>
                     <p class="item__price">£95.50</p></div>
                 <span class="item__arrow item__arrow_down"></span>
             </div>
+            <div class="item__equal-sign ">
+                =
+            </div>
+
+            <div class="container section__best-offer_items-price center-column">
+                <span class="items-price_old_line"></span>
+                <span class="items-price_old "> £161.00</span>
+                <span class="items-price_new">£146.00</span>
+                <button class=" section__bought-button button_buy-now">Add to bag</button>
+            </div>
+
         </div>
 
-        <div class="container section__best-offer_items-price center-column">
-            <span class="items-price_old">£161.00</span>
-            <span class="items-price_new"> = £146.00</span>
+        <div class="section__best-offer_items-price-mobile">
+            <div class="container section__best-offer_items-price center-column">
+                <span class="items-price_old_line"></span>
+                <span class="items-price_old "> £161.00</span>
+                <span class="items-price_new">= £146.00</span>
+            </div>
 
         </div>
+
+        <!-- <button class="container center-column section__bought-button button_buy-now">Add to bag</button>-->
 
     </section>
+    <div class="separator"></div>
+    <section class="section__new-arrivals container">
 
+        <div class="section__new-arrivals_info">
+            <span class="title">New arrivals</span>
+        </div>
+
+        <div class="section__new-arrivals_items_grid-container">
+            <div class="item center-column">
+                <img src="img/skinny_jeans.jpeg" alt="Only Skinny Jeans" class="item__picture" id="item1NewArrivals">
+                <div class="item__info">
+                    <p class="item__title">Only Skinny Jeans</p>
+                    <p class="item__price">£65.50</p></div>
+            </div>
+
+                <div class="item center-column">
+                    <img src="img/knitted_jumper.jpeg" alt="Neck Knitted Jumper" class="item__picture"  id="item2NewArrivals">
+                    <div class="item__info">
+                        <p class="item__title">Neck Knitted Jumper</p>
+                        <p class="item__price">£76.25</p>
+                    </div>
+                </div>
+
+            <div class="item center-column">
+                <img src="img/turtle_jumper.jpeg" alt="Turtle Neck Jumper in Rib" class="item__picture"  id="item3NewArrivals">
+                <div class="item__info">
+                    <p class="item__title">Turtle Neck Jumper in Rib</p>
+                    <p class="item__price">£130.25</p>
+                </div>
+            </div>
+
+            <div class="item center-column">
+                <img src="img/crochet.jpeg" alt="With Patchwork Crochet" class="item__picture"  id="item4NewArrivals">
+                <div class="item__info">
+                    <p class="item__title">With Patchwork Crochet</p>
+                    <p class="item__price">£130.25</p>
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+        <div class="center-column">
+        <button class=" center-column section__bought-button button_new-arrivals">All arrivals</button>
+        </div>
+    </section>
+    <div class="separator"></div>
 </main>
 
+<footer class="footer">
+    <div class="footer__section_direction container">
 
-<footer></footer>
+
+        <div class="footer__section-links ">
+            <div class="section_row footer__section-links_first_column">
+                <div class="section_column footer__first_column">
+                    <p class="footer__column__title ">Quick Links</p>
+                    <ul class="footer__column__list">
+                        <li><a href="#">Store locator</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Size guide</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="section_column footer__section_column_right">
+                    <p class="footer__column__title ">Customer Care</p>
+                    <ul class="footer__column__list">
+                        <li><a href="#">Customer service</a></li>
+                        <li><a href="#">Track my order</a></li>
+                        <li><a href="#">Return policy</a></li>
+                        <li><a href="#">Shipping & delivery</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer__section-feedback footer__section-feedback_container">
+
+            <div class="footer__section-feedback_direction">
+                <div class="section_column footer__first_column feedback-column " id="border">
+                    <p class="footer__column__title ">Questions</p>
+
+                    <p class="footer__column_info">
+                        <img src="img/start_page/icons/twi_icon_grey.svg" class="footer__icon">Tweet us
+                        <b>@template</b></p>
+                </div>
+
+                <div class="section_column feedback-column footer__section_column_right">
+                    <p class="footer__column__title ">Order by phone</p>
+                    <p class="footer__column_info">8-800-409-47-12</p>
+                </div>
+            </div>
+
+            <div class="footer__column__info_delivery">
+                We have our own delivery service
+                which operates in 23 major European cities.
+                Delivery time - 3-5 days.
+            </div>
+
+            <div class="footer___section_icons section_row" id="footerSectionIconsDesktopTablet">
+                <img src="img/start_page/icons/facebook_icon.svg " class="footer__icon ">
+                <img src="img/start_page/icons/twi_icon_blue.svg" class="footer__icon">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </div>
+    <div class="separator"></div>
+    <div class="footer__section-bottom container">
+
+        <div class="section__copyright">
+            <span class="copyright"> © 2010–2015, The Template Group inc.</span>
+        </div>
+        <div class="section__sharing">
+            <span class="share">Share</span>
+            <div class="section__sharing_image">
+                <img src="img/start_page/icons/share.svg" class="footer_share_img">
+                <div class="share_text">1437</div>
+            </div>
+        </div>
+        <div class="section__policy">
+            <a href="#">Legal notice</a>
+            <a href="#">Privacy policy </a>
+            <a href="#">Site map</a>
+
+        </div>
+    </div>
+
+    <div class="footer__section-bottom-mobile  ">
+        <div class="section__bottom_first container">
+            <div class="section__bottom_text section__policy">
+                <a href="#">Legal notice</a>
+                <a href="#">Privacy policy </a>
+                <a href="#">Site map</a>
+            </div>
+            <div class="footer___section_icons section_row">
+                <img src="img/start_page/icons/facebook_icon.svg " class="section__bottom__footer__icon ">
+                <img src="img/start_page/icons/twi_icon_blue.svg" class="footer__icon">
+            </div>
+
+        </div>
+<div class="separator"></div>
+
+        <div class="section__bottom_second container">
+            <div class="section__copyright">
+                <span class="section__bottom_text"> © 2010–2015, The Template Group inc.</span>
+            </div>
+
+            <div class="section__sharing">
+                <span class="share">Share</span>
+                <div class="section__sharing_image">
+                    <img src="img/start_page/icons/share.svg" class="footer_share_img">
+                    <div class="share_text">1437</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
 
 </body>
 </html>
