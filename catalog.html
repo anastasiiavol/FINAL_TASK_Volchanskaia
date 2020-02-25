@@ -2,11 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta charset="UTF-8"><link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>catalog</title>
+    <title>Сatalog</title>
 </head>
 <body>
+<header class="header"  >
 
+    <div class="header__section_direction " id="headerDesktop">
+
+        <div class="header__content container ">
+
+            <div class="header__content-logo-bag">
+                <div class="header__content-logo">
+                    <div><a href="" class="header__logo" id="logoDesktop">Template</a></div>
+
+                </div>
+                <div class="header__content-bag">
+                    <span class="header__content_bag-sing-up" id="signUp">E-mail sing up</span>
+                    <span> <img src="img/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon">  Bag (0) </span>
+                </div>
+            </div>
+
+        </div> <!--header__content-->
+
+        <div class="header__content_menu container ">
+            <div class="navigation">
+                <nav>
+
+                    <ul class="header__menu">
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Handbags</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Sale</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Clearance</a></li>
+                        <li><a href="#">Store Locator</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header__content_menu_search">
+                <div class="header__menu__search_container">
+                    <input type="text" id="inputSearchHeader" value="" placeholder="Style Name" id="searchBar"
+                           class="header__menu__search_input">
+                    <button class="header__menu__search_button"><img src="img/icons/search.svg"
+                                                                     class="header__menu_search_button_img">
+                    </button>
+                </div>
+            </div>
+
+        </div> <!--header__content_menu-->
+
+    </div> <!--header__section_direction-->
+
+    <div id="headerMobile" class="container">
+
+        <div class="section_row">
+            <div><a href="" class="header__logo" id="logoMobile">TL</a></div>
+            <div> <img src="img/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon">  Bag (0)</div>
+        </div>
+
+
+        <input class="menu__button" type="checkbox" id="menuBtn"/>
+        <label class="menu__icon" for="menuBtn"><span class="menu__icon-lines"></span></label>
+        <ul class="header__menu">
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Handbags</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Sale</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Clearance</a></li>
+            <li><a href="#">Store Locator</a></li>
+        </ul>
+
+    </div>
+    </div>
+
+
+</header>
 </body>
 </html>

@@ -1,4 +1,4 @@
-window.catalog = [{
+ window.catalog = [{
     id: '014c271a-2811-47fc-b63f-ba279a4ec830',
     dateAdded: '2017-05-15T16:58:40.000Z',
     title: 'Monki Festival Knitted',
