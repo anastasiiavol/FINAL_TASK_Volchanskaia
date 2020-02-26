@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 @font-face {
@@ -12,6 +13,29 @@
 @font-face {
     font-family: 'Roboto', sans-serif;
     src: url(/fonts/Roboto-Regular.ttf);
+
+}
+
+.title, .title__banner-name, .header__logo, .header__menu, #inputSearchHeader,
+.item__picture_hover-tex, .section__button, .section__button:hover,
+.footer__share-icon, .footer__column__title, .item-page__back-to-catalog_button,
+.item__info_radio label, .section__advertising_title {
+    font-family: 'Open Sans', sans-serif;,
+font-weight: bold;
+}
+
+/*.section__best-offer_items-price .items-price_old, .section__best-offer_items-price .items-price_new,
+.footer__column__list,.footer__column_info,.section__sharing_image .share_text, .copyright, .section__policy,
+.copyright, .section__policy, .section__bottom_text,.item__info-title, .item__info-price*/
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.subtitle__banner-name, .section__best-offer_info .subtitle,
+.footer__column__info_delivery, .item__info-description, .sale_subtitle,
+.adidasBlue_subtitle {
+    font-family: "Times New Roman", sans-serif;
+    font-style: italic;
 }
 
 .container {
@@ -35,21 +59,12 @@ a {
 }
 
 .title {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
+
     display: flex;
     justify-content: center;
 }
 
-
-.title__banner-name {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-}
-
 .subtitle__banner-name {
-    font-family: "Times New Roman", sans-serif;
-    font-style: italic;
     color: #757575;
     font-size: 16px;
 }
@@ -59,10 +74,6 @@ header {
 
 }
 
-.header__logo, .header__menu {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-}
 
 .header__content_menu ul {
     list-style-type: none;
@@ -73,7 +84,6 @@ header {
 }
 
 #inputSearchHeader {
-    font-family: 'Open Sans', sans-serif;
     color: #a8a8a8;
 }
 
@@ -109,7 +119,7 @@ header {
     display: inline-block;
 }
 
-.banner__img, .item__picture {
+.banner__img, .item__picture, .section__advertising_img, .image-link {
     width: 100%;
     height: auto;
 }
@@ -122,8 +132,6 @@ header {
 }
 
 .section__best-offer_info .subtitle {
-    font-family: "Times New Roman", sans-serif;
-    font-style: italic;
     text-align: center;
 }
 
@@ -143,9 +151,6 @@ header {
 }
 
 .item__picture_hover-text {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-
     opacity: 0;
     position: absolute;
     top: 50%;
@@ -189,7 +194,6 @@ header {
 
 
 .section__best-offer_items-price .items-price_old {
-    font-family: 'Roboto', sans-serif;
     color: #757575;
     font-size: 18px;
     margin-bottom: 20px;
@@ -210,7 +214,6 @@ header {
 
 
 .section__best-offer_items-price .items-price_new {
-    font-family: 'Roboto', sans-serif;
     color: black;
     font-weight: bold;
     font-size: 26px;
@@ -231,9 +234,8 @@ header {
     border: 1px solid #e5e5e5;
     background-color: white;
     color: black;
-    font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
     border-radius: 1px;
+
 
 }
 
@@ -242,9 +244,6 @@ header {
     border: 1px solid #f14a58;
     background-color: white;
     color: #f14a58;
-    font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
-
 }
 
 .section__new-arrivals_info {
@@ -258,12 +257,6 @@ header {
 }
 
 
-.footer__share-icon {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-
-}
-
 .section_column {
     display: flex;
     flex-direction: column;
@@ -276,14 +269,8 @@ header {
     justify-content: flex-start;
 }
 
-.footer__column__title {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-}
-
 
 .footer__column__list {
-    font-family: 'Roboto', sans-serif;
     list-style: none;
 }
 
@@ -293,10 +280,6 @@ header {
     margin-right: 10px;
 }
 
-.footer__column_info {
-    font-family: 'Roboto', sans-serif;
-
-}
 
 .footer__column__info_link {
     font-weight: bold;
@@ -327,11 +310,78 @@ header {
     top: 20%;
     text-align: center;
     width: 80%;
-    font-family: 'Roboto', sans-serif;
+}
+
+.item-page__back-to-catalog_button {
+    padding: 25px 0;
+}
+
+.item__gallery_main-img{
+display: flex;
+}
+
+
+.item__info-title {
+    font-weight: bold;
+}
+
+.item__info_radio {
+    margin: 20px;
+
+}
+
+.item__info_radio input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.item__info_radio label {
+    padding: 10px 20px;
+    font-size: 16px;
+
+}
+
+.item__info_radio label:hover {
+    border: 1px solid #f1f1f1;
+
+}
+
+.item__info_radio input[type="radio"]:focus + label {
+    border: 1px solid #f1f1f1;
+}
+
+.item__info_radio input[type="radio"]:checked + label {
+    border-color: #bebebe;
+}
+
+.item__info_radio label {
+    background-color: white;
+    font-size: 14px;
 }
 
 /*FOOTER END*/
+.section__advertising_box {
+    position: relative;
+    display: inline-block;
+}
 
+.section__advertising_box .section__advertising_title {
+    position: absolute;
+    text-align: center;
+}
+
+.adidasBlue_title, .repairPatches_title {
+    color: white;
+}
+
+.sale_title {
+    color: #f14a58
+}
+
+.sale_subtitle {
+    color: gray;
+}
 
 @media (min-width: 1024px) and (max-width: 1930px) {
     .section__best-offer_items-price-mobile {
@@ -378,7 +428,7 @@ header {
     .section__button {
         font-size: 24px;
         width: 20vw;
-        height: 15vh;
+        height: 10vh;
     }
 
     .section__new-arrivals_items_grid-container {
@@ -396,6 +446,99 @@ header {
         font-size: 22px;
     }
 
+
+    .item__section_direction {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+
+    .item__section {
+        display: flex;
+        flex-direction: row;
+        padding: 60px 0 100px 0;
+    }
+
+    .item__info_section {
+        padding: 30px 0;
+    }
+
+    .item__info-description {
+        padding: 25px 0 50px 0;
+        font-size: 16px;
+    }
+
+    .item__info-price {
+        font-size: 26px;
+        padding-bottom: 50px;
+    }
+
+    .item__info-sizes, .item__info-colors {
+        font-size: 12px;
+        width: 30vw;
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .item__info-title {
+        margin: auto 0;
+    }
+
+    .section__advertising_box .repairPatches_title {
+        left: 0;
+        right: 0;
+        top: 70%;
+    }
+
+
+    .section__advertising_box .adidasBlue_title {
+        left: 30vw;
+        right: 0;
+        top: 20%;
+    }
+
+    .section__advertising_box .sale_title {
+        left: 0;
+        right: 0;
+        top: 70%;
+    }
+
+    .section__advertising_title {
+        font-size: 28px;
+    }
+
+    .section__advertising_subtitle {
+        font-size: 16px;
+    }
+
+    .gallery__img-buttons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .item__gallery {
+        display: grid;
+        grid-template-areas: "top top top " "t1 t2 t3";
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    .item__gallery_main-img {
+        grid-area: top;
+    }
+
+    #first {
+        grid-area: t1;
+    }
+
+    #second {
+        grid-area: t2;
+    }
+
+    #third {
+        grid-area: t3;
+    }
 }
 
 
@@ -458,6 +601,34 @@ header {
         margin: 15vh 0;
     }
 
+    .gallery__img-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item__gallery {
+        display: grid;
+        grid-template-areas: "top top t1 " "top top t2" "top top t3";
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    .item__gallery_main-img {
+        grid-area: top;
+    }
+
+    #first {
+        grid-area: t1;
+    }
+
+    #second {
+        grid-area: t2;
+    }
+
+    #third {
+        grid-area: t3;
+    }
+
+
 }
 
 @media only screen and  (max-width: 768px) {
@@ -512,6 +683,33 @@ header {
         grid-template-columns: 1fr 1fr;
         grid-gap: 80px;
         justify-content: space-between;
+    }
+
+    .gallery__img-buttons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .item__gallery {
+        display: grid;
+        grid-template-areas: "top top top " "t1 t2 t3";
+        grid-auto-rows: minmax(100px, auto);
+    }
+
+    .item__gallery_main-img {
+        grid-area: top;
+    }
+
+    #first {
+        grid-area: t1;
+    }
+
+    #second {
+        grid-area: t2;
+    }
+
+    #third {
+        grid-area: t3;
     }
 
 }
@@ -582,6 +780,29 @@ header {
 
     .header__menu {
         font-size: 13px;
+    }
+
+    .item__info_section button {
+        margin-top: 40px;
+        margin-left: 40px;
+    }
+
+    .item__title {
+        font-size: 26px;
+    }
+
+    .section__advertising {
+
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    #adidasBlue {
+        width: 50vw;
+    }
+
+    #sale, #repairPatches {
+        width: 25vw;
     }
 
 }
@@ -659,11 +880,12 @@ header {
 
     .header {
         background-color: #fff;
-        box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+        box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
         position: fixed;
         width: 100%;
         z-index: 3;
     }
+
     .header__logo {
         font-size: 24px;
 
@@ -696,6 +918,7 @@ header {
     .header li a:hover {
         color: #f14a58;
     }
+
     .header .header__logo {
         display: block;
         float: left;
@@ -814,9 +1037,7 @@ header {
     }
 
     .footer__column__info_delivery {
-        font-family: "Times New Roman", sans-serif;
         font-size: 16px;
-        font-style: italic;
         color: gray;
         width: 20vw;
         margin-top: 6vh;
@@ -843,7 +1064,6 @@ header {
     }
 
     .copyright, .section__policy {
-        font-family: 'Roboto', sans-serif;
         font-weight: bold;
         font-size: 12px;
     }
@@ -939,7 +1159,6 @@ header {
     }
 
     .copyright, .section__policy {
-        font-family: 'Roboto', sans-serif;
         font-weight: bold;
         font-size: 12px;
     }
@@ -1075,7 +1294,6 @@ header {
     }
 
     .section__bottom_text {
-        font-family: 'Roboto', sans-serif;
         font-weight: bold;
         font-size: 10px;
     }
