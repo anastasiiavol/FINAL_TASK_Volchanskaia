@@ -16,31 +16,24 @@
 
 }
 
-.title, .title__banner-name, .header__logo, .header__menu, #inputSearchHeader,
-.item__picture_hover-tex, .section__button, .section__button:hover,
-.footer__share-icon, .footer__column__title, .item-page__back-to-catalog_button,
-.item__info_radio label, .section__advertising_title {
-    font-family: 'Open Sans', sans-serif;,
-font-weight: bold;
-}
-
-/*.section__best-offer_items-price .items-price_old, .section__best-offer_items-price .items-price_new,
-.footer__column__list,.footer__column_info,.section__sharing_image .share_text, .copyright, .section__policy,
-.copyright, .section__policy, .section__bottom_text,.item__info-title, .item__info-price*/
 body {
     font-family: 'Roboto', sans-serif;
 }
 
-.subtitle__banner-name, .section__best-offer_info .subtitle,
-.footer__column__info_delivery, .item__info-description, .sale_subtitle,
-.adidasBlue_subtitle {
-    font-family: "Times New Roman", sans-serif;
-    font-style: italic;
-}
 
 .container {
     width: 90%;
     max-width: 1180px;
+}
+
+.container__promo-blocks {
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+.separator {
+    height: 1px;
+    background: #e5e5e5;
 }
 
 a {
@@ -74,34 +67,16 @@ header {
 
 }
 
-
 .header__content_menu ul {
     list-style-type: none;
 }
 
-.header__menu__search_container {
-    position: relative;
-}
-
-#inputSearchHeader {
-    color: #a8a8a8;
-}
-
-.header__menu__search_input {
+input[type=search] {
     border-top: none;
     border-left: none;
     border-right: none;
+    border-bottom: solid 1px #e5e5e5;
 }
-
-.header__menu__search_button {
-    background: none;
-    border: none;
-}
-
-.header__menu_search_button_img {
-    position: absolute;
-}
-
 
 .container {
     background-color: white;
@@ -109,20 +84,24 @@ header {
     height: auto;
 }
 
-.separator {
-    width: 100%;
-    border-bottom: 1px solid #e5e5e5;
-}
 
 .banner {
     position: relative;
     display: inline-block;
 }
 
-.banner__img, .item__picture, .section__advertising_img, .image-link {
+.banner__img, .item__picture, .image-link {
     width: 100%;
     height: auto;
+    display: flex;
 }
+
+.section__advertising_img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
 
 .banner .title__banner-name {
     position: absolute;
@@ -316,14 +295,6 @@ header {
     padding: 25px 0;
 }
 
-.item__gallery_main-img{
-display: flex;
-}
-
-
-.item__info-title {
-    font-weight: bold;
-}
 
 .item__info_radio {
     margin: 20px;
@@ -383,8 +354,34 @@ display: flex;
     color: gray;
 }
 
+.section__advertising_box {
+    display: flex;
+}
+
+#galleryMain, .gallery__img_btn-mini, .gallery__img_btn, .item__gallery_main-img {
+    display: flex;
+}
+
+.item__gallery container {
+    overflow: hidden;
+}
+
+#galleryMain, .gallery__img_btn-mini {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 1400px) and (max-width: 1930px) {
+    .separator {
+        height: 1px;
+        width: 100%;
+        background-image: radial-gradient(farthest-side at center top, #e5e5e5 0%, #e5e5e5 80%, #f8f8f8 100%);
+    }
+}
+
 @media (min-width: 1024px) and (max-width: 1930px) {
-    .section__best-offer_items-price-mobile {
+    .section__best-offer_items-price-mobile, #searchMobile, #searchTablet,
+    #itemInfoPriceTabletMobile, #itemInfoDescriptionTabletMobile {
         display: none;
     }
 
@@ -476,13 +473,12 @@ display: flex;
 
     .item__info-sizes, .item__info-colors {
         font-size: 12px;
-        width: 30vw;
         display: flex;
         flex-direction: row;
     }
 
 
-    .item__info-title {
+    .item__info_btn_title {
         margin: auto 0;
     }
 
@@ -516,34 +512,94 @@ display: flex;
     .gallery__img-buttons {
         display: flex;
         flex-direction: row;
+        grid-area: bot;
     }
 
     .item__gallery {
+        width: 50vw;
         display: grid;
-        grid-template-areas: "top top top " "t1 t2 t3";
-        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas: "top top top " "bot bot bot";
+        grid-auto-rows: auto auto;
+    }
+
+    .item__info_section {
+        padding-left: 5vw;
     }
 
     .item__gallery_main-img {
         grid-area: top;
     }
 
-    #first {
-        grid-area: t1;
+
+    /*FILTER*/
+    .filter__body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
-    #second {
-        grid-area: t2;
+    .filter__body .filter__dropdown {
+        width: 17%;
     }
 
-    #third {
-        grid-area: t3;
+    .filter__dropdown_btn {
+        background-color: white;
+        color: black;
+        padding: 13px;
+        font-size: 16px;
+
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropdown-btn_content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    .dropdown-btn_content li {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-btn_content li:hover {
+        background-color: #f1f1f1
+    }
+
+    .filter__dropdown:hover .dropdown-btn_content {
+        display: block;
+    }
+
+    .filter__dropdown:hover {
+        background-color: #f7f7f7;
+    }
+
+    input[type=search] {
+        background: url(../img/icons/search.svg) no-repeat right;
+        width: 10vw;
+        padding: 10px;
+
+    }
+
+    ::placeholder {
+        font-size: 10px;
+        color: gray;
+    }
+
+    .header__content_menu_search {
+        display: block;
     }
 }
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
-    .section__best-offer_items-price-mobile, #item4NewArrivals {
+    .section__best-offer_items-price-mobile, #item4NewArrivals, #searchMobile, #searchDesktop,
+    #itemInfoPriceDesktop, #itemInfoDescriptionDesktop, #sale {
         display: none;
     }
 
@@ -604,11 +660,12 @@ display: flex;
     .gallery__img-buttons {
         display: flex;
         flex-direction: column;
+        grid-area: bot;
     }
 
     .item__gallery {
         display: grid;
-        grid-template-areas: "top top t1 " "top top t2" "top top t3";
+        grid-template-areas: "top top top " "bot bot bot";
         grid-auto-rows: minmax(100px, auto);
     }
 
@@ -616,27 +673,125 @@ display: flex;
         grid-area: top;
     }
 
-    #first {
-        grid-area: t1;
-    }
 
-    #second {
-        grid-area: t2;
-    }
+    .header__menu__search_button:focus {
+        border-bottom: 1px solid #e5e5e5;
 
-    #third {
-        grid-area: t3;
+        background-color: white;
     }
 
 
+    .header__menu__search_button:focus .header__menu_search_button_text {
+        visibility: visible;
+        color: #afafaf;
+    }
+
+    .gallery__img-buttons {
+        display: flex;
+        flex-direction: column;
+        grid-area: bot;
+    }
+
+    .item__gallery {
+        display: grid;
+        grid-template-areas: "top bot";
+        grid-auto-columns: auto auto;
+    }
+
+    .item__gallery_main-img {
+        grid-area: top;
+    }
+
+    .item__section {
+        display: flex;
+        flex-direction: column;
+        padding: 60px 0 100px 0;
+    }
+
+    .item__section_direction {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item__info_section {
+        padding: 30px 0;
+    }
+
+    .item__info-title {
+        font-size: 20px;
+        padding-bottom: 35px;
+    }
+
+    .item__info-price {
+        font-size: 18px;
+        padding-bottom: 20px;
+    }
+
+    .item__info-description {
+        width: 55vw;
+        font-size: 14px;
+        padding-bottom: 30px;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .item__info-sizes, .item__info-colors {
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    .item__info-btn {
+        width: 35vw;
+        height: 75px;
+    }
+
+    .section__advertising_title {
+        font-size: 22px;
+    }
+
+    .section__advertising_subtitle {
+        font-size: 16px;
+    }
+
+    .item__info_btn_title {
+        margin: auto 0;
+    }
+
+    .section__advertising_box .repairPatches_title {
+        left: 0;
+        right: 0;
+        top: 70%;
+    }
+
+    .section__advertising_box .adidasBlue_title {
+        left: 30vw;
+        right: 0;
+        top: 10%;
+    }
+
+    .section__advertising_img-wrapper {
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .section__advertising_img-wrapper img {
+        display: block;
+        width: 100%;
+        margin: 0 0 -20% 0;
+    }
 }
 
 @media only screen and  (max-width: 768px) {
-    #secondBanner, #bestOfferDesktop, .item__equal-sign, #item4NewArrivals, #item3NewArrivals {
+    #secondBanner, #bestOfferDesktop, .item__equal-sign, #item4NewArrivals, #item3NewArrivals,
+    #itemInfoPriceDesktop, #itemInfoDescriptionDesktop,
+    #repairPatches, #sale{
         display: none;
     }
 
     .banner {
+        padding-top: 5vh;
         width: 100%;
     }
 
@@ -685,35 +840,110 @@ display: flex;
         justify-content: space-between;
     }
 
+    .button_new-arrivals {
+        margin: 5vh 0;
+    }
+
     .gallery__img-buttons {
         display: flex;
         flex-direction: row;
+        grid-area: bot;
     }
 
     .item__gallery {
         display: grid;
-        grid-template-areas: "top top top " "t1 t2 t3";
-        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas: "top top top " "bot bot bot";
+        grid-auto-rows: auto auto;
     }
 
     .item__gallery_main-img {
         grid-area: top;
+
     }
 
-    #first {
-        grid-area: t1;
+    .item__section_direction {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    #second {
-        grid-area: t2;
+    .item__info_section {
+        padding: 30px 0;
     }
 
-    #third {
-        grid-area: t3;
+    .item__info-title {
+        font-size: 20px;
+        padding-bottom: 15px;
     }
+
+    .item__info-price {
+        font-size: 18px;
+        padding-bottom: 15px;
+    }
+
+    .item__info-description {
+        font-size: 14px;
+        padding-bottom: 15px;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .item__info-sizes, .item__info-colors {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-bottom: 30px;
+
+    }
+
+    .item__info-btn {
+        width: 35vw;
+        height: 75px;
+    }
+
+    .section__advertising_title {
+        font-size: 22px;
+    }
+
+    .section__advertising_subtitle {
+        font-size: 16px;
+    }
+
+    .item__info_btn_title {
+        margin: auto 0;
+    }
+
+    .item__info_radio {
+        margin: 0;
+    }
+
+    .item__info-btn {
+        width: 60vw;
+        height: 75px;
+    }
+    .section__advertising_img{
+        width: 100vw;
+    }
+    .section__advertising_title {
+        font-size: 20px;
+    }
+
+    .section__advertising_subtitle {
+        font-size: 14px;
+    }
+
+    .item__info_btn_title {
+        margin: auto 0;
+    }
+
+    .section__advertising_box .adidasBlue_title {
+        left: 50vw;
+        right: 0;
+        top: 20%;
+    }
+
 
 }
-
 
 /*HEADER*/
 @media (min-width: 1024px) and (max-width: 1930px) {
@@ -761,22 +991,6 @@ display: flex;
         width: 60vw;
     }
 
-    .header__menu__search_container {
-        position: relative;
-    }
-
-
-    .header__menu__search_input {
-        width: 120px;
-        height: 30px;
-    }
-
-
-    .header__menu_search_button_img {
-        height: 15px;
-        bottom: 5px;
-        right: 5px;
-    }
 
     .header__menu {
         font-size: 13px;
@@ -787,7 +1001,7 @@ display: flex;
         margin-left: 40px;
     }
 
-    .item__title {
+    .item__info-title {
         font-size: 26px;
     }
 
@@ -797,13 +1011,6 @@ display: flex;
         grid-template-columns: auto auto auto;
     }
 
-    #adidasBlue {
-        width: 50vw;
-    }
-
-    #sale, #repairPatches {
-        width: 25vw;
-    }
 
 }
 
@@ -815,6 +1022,27 @@ display: flex;
     .header__logo {
         font-size: 26px;
 
+    }
+
+    .header__content_menu_search {
+        position: absolute;
+        left: 65vw;
+    }
+
+    .header__menu_search_button_text {
+        visibility: hidden;
+    }
+
+    .header__menu__search_button {
+        width: 30vw;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: solid 1px white;
+        margin-top: 5px;
     }
 
     .header__section_direction {
@@ -851,10 +1079,6 @@ display: flex;
         width: 80vw;
     }
 
-    .header__menu__search_container {
-        position: relative;
-    }
-
 
     .header__menu__search_input {
         width: 120px;
@@ -871,6 +1095,7 @@ display: flex;
     .header__menu {
         font-size: 12px;
     }
+
 }
 
 @media only screen and  (max-width: 768px) {
@@ -879,26 +1104,20 @@ display: flex;
     }
 
     .header {
-        background-color: #fff;
-        box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+        border-bottom: 1px solid #e5e5e5;
         position: fixed;
         width: 100%;
         z-index: 3;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
-    .header__logo {
-        font-size: 24px;
-
-    }
 
     .header__section_direction {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
-    }
-
-    .header__content_menu_search {
-        display: none;
     }
 
     .header ul {
@@ -922,25 +1141,24 @@ display: flex;
     .header .header__logo {
         display: block;
         float: left;
-        font-size: 2em;
-
+        font-size: 24px;
         text-decoration: none;
     }
 
-    .header .header__menu {
+    .header__content-bag {
+        width: 30vw;
+    }
+
+    .burger .header__menu {
         clear: both;
         max-height: 0;
         transition: max-height .2s ease-out;
-    }
 
+    }
 
     .header .menu__icon {
         cursor: pointer;
-        display: inline-block;
         float: right;
-        padding: 28px 20px;
-        position: relative;
-        user-select: none;
 
     }
 
@@ -1001,21 +1219,20 @@ display: flex;
     }
 
     .header__content-logo-bag {
+        width: 70vw;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
     }
 
-    .button_new-arrivals {
-        margin: 5vh 0;
-    }
 
 }
 
 /*FOOTER*/
 
 @media (min-width: 1024px) and (max-width: 1800px) {
+
 
     .footer__section_direction {
         display: flex;
@@ -1054,7 +1271,7 @@ display: flex;
     }
 
     .footer__section-feedback_container {
-        padding-left: 60px;
+        /*  padding-left: 60px;*/
     }
 
     .footer__section-bottom {
@@ -1100,13 +1317,16 @@ display: flex;
         display: none;
     }
 
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+
     .footer__section_direction {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        padding-bottom: 5vh;
     }
 
     .footer__column__title {
@@ -1210,11 +1430,11 @@ display: flex;
 }
 
 @media only screen and  (max-width: 768px) {
+
     .footer__section_direction {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-
     }
 
     .footer__column__title {
@@ -1257,6 +1477,10 @@ display: flex;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+    }
+
+    .footer__section-links_first_column {
+        padding-bottom: 5vh;
     }
 
     .feedback-column {
@@ -1321,3 +1545,17 @@ display: flex;
 }
 
 
+.title, .title__banner-name, .header__logo, .header__menu,
+.item__picture_hover-text, .section__button, .section__button:hover,
+.footer__share-icon, .footer__column__title, .item-page__back-to-catalog_button,
+.item__info_radio label, .section__advertising_title, .header__menu_search_button_text, .item__info-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+.subtitle__banner-name, .section__best-offer_info .subtitle,
+.footer__column__info_delivery, .item__info-description, .sale_subtitle,
+.adidasBlue_subtitle {
+    font-family: "Times New Roman", sans-serif;
+    font-style: italic;
+}

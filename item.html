@@ -40,18 +40,29 @@
                         <li><a href="#">New Arrivals</a></li>
                         <li><a href="#">Clearance</a></li>
                         <li><a href="#">Store Locator</a></li>
+                        <form id="searchMobile" class="search__field">
+                            <input type="search" placeholder="Style Name">
+                        </form>
                     </ul>
                 </nav>
+
             </div>
 
             <div class="header__content_menu_search">
-                <div class="header__menu__search_container">
-                    <input type="text" id="inputSearchHeader" value="" placeholder="Style Name" id="searchBar"
-                           class="header__menu__search_input">
-                    <button class="header__menu__search_button"><img src="img/icons/search.svg"
-                                                                     class="header__menu_search_button_img">
-                    </button>
-                </div>
+                <button class="header__menu__search_button" id="searchTablet">
+                    <span class="header__menu_search_button_text">Style name...</span>
+                    <img src="img/icons/search.svg" class="header__menu_search_button_img">
+
+                </button>
+
+                <form id="searchDesktop" class="search__field">
+                    <input type="search" placeholder="Style Name">
+                </form>
+                <!-- <form id="searchTablet" class="search__field">
+                     <input type="search" placeholder="Style Name">
+                 </form>-->
+
+
             </div>
 
         </div> <!--header__content_menu-->
@@ -59,30 +70,32 @@
     </div> <!--header__section_direction-->
 
     <div id="headerMobile" class="container">
+        <div class="header__content-logo-bag">
+            <div class="header__content-logo"><a href="" class="header__logo" id="logoMobile">TL</a></div>
+            <div class="header__content-bag"><img src="img/icons/ico_bag.svg" alt="bag"
+                                                  class="header__content_bag-icon"> Bag (0)
+            </div>
+        </div>
+        <div class="burger">
+            <input class="menu__button" type="checkbox" id="menuBtn"/>
+            <label class="menu__icon" for="menuBtn"><span class="menu__icon-lines"></span></label>
+            <ul class="header__menu">
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Handbags</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Sale</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Clearance</a></li>
+                <li><a href="#">Store Locator</a></li>
+            </ul>
 
-        <div><a href="" class="header__logo" id="logoMobile">TL</a></div>
-        <div><img src="img/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon"> Bag (0)</div>
-
-
-        <input class="menu__button" type="checkbox" id="menuBtn"/>
-        <label class="menu__icon" for="menuBtn"><span class="menu__icon-lines"></span></label>
-        <ul class="header__menu">
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Handbags</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="#">Sale</a></li>
-            <li><a href="#">New Arrivals</a></li>
-            <li><a href="#">Clearance</a></li>
-            <li><a href="#">Store Locator</a></li>
-        </ul>
-
+        </div>
     </div>
     </div>
 
 
 </header>
-
 <div class="separator"></div>
 <div class="container">
     <div class="item-page__back-to-catalog_button"><a href="catalog.html">< Back to catalog</a></div>
@@ -92,27 +105,27 @@
     <div class="">
         <div class="container item__section">
 
-           <!-- <div class="item__gallery">
-                <div id="switcher-wrap">
-                    <a id="one" class="image-link" href="#"><img src="img/item_1/item_1__thumb_0.jpeg"></a>
-                    <a id="two" class="image-link" href="#"><img src="img/item_1/item_1__thumb_1.jpeg"></a>
-                    <a id="three" class="image-link" href="#"><img src="img/item_1/item_1__thumb_2.jpeg"></a>
+            <!-- <div class="item__gallery">
+                 <div id="switcher-wrap">
+                     <a id="one" class="image-link" href="#"><img src="img/item_1/item_1__thumb_0.jpeg"></a>
+                     <a id="two" class="image-link" href="#"><img src="img/item_1/item_1__thumb_1.jpeg"></a>
+                     <a id="three" class="image-link" href="#"><img src="img/item_1/item_1__thumb_2.jpeg"></a>
 
-                </div>
-            </div>-->
+                 </div>
+             </div>-->
 
-            <div class="item__gallery container" >
-                <div class="item__gallery_main-img"><img src="img/item_1/item_1__full_0.jpeg" id="galleryMain" ></div>
+            <div class="item__gallery container">
+                <div class="item__gallery_main-img"><img src="img/item_1/item_1__full_0.jpeg" id="galleryMain"></div>
 
                 <div class="gallery__img-buttons ">
                     <div class="gallery__img_btn">
-                        <img src="img/item_1/item_1__thumb_0.jpeg">
+                        <img src="img/item_1/item_1__thumb_0.jpeg" class="gallery__img_btn-mini">
                     </div>
                     <div class="gallery__img_btn">
-                     <img src="img/item_1/item_1__thumb_1.jpeg">
+                        <img src="img/item_1/item_1__thumb_1.jpeg " class="gallery__img_btn-mini">
                     </div>
                     <div class="gallery__img_btn">
-                       <img src="img/item_1/item_1__thumb_2.jpeg">
+                        <img src="img/item_1/item_1__thumb_2.jpeg" class="gallery__img_btn-mini">
                     </div>
                 </div>
 
@@ -120,31 +133,39 @@
 
 
             <div class="item__info_section item__section_direction">
-                <div class="item__title">Dark classic fit suit</div>
-                <div class="item__info-description">Featuring fine Italian wool, this elegant suit has pick-stitch
-                    edging,
-                    cascade buttons at the cuffs
+                <div class="item__info-title">Dark classic fit suit</div>
+                <div class="item__info-description" id="itemInfoDescriptionDesktop">Featuring fine Italian wool, this elegant suit has pick-stitch
+                    edging, cascade buttons at the cuffs and a subtle stripe pattern throughout.
                 </div>
-                <div class="item__info-price">£180.60</div>
+                <div class="item__info-price" id="itemInfoPriceDesktop">£180.60</div>
+
+
+                <div class="item__info-price" id="itemInfoPriceTabletMobile">£180.60</div>
+                <div class="item__info-description" id="itemInfoDescriptionTabletMobile">Featuring fine Italian wool, this elegant suit has pick-stitch
+                    edging, cascade buttons at the cuffs and a subtle stripe pattern throughout.
+                </div>
+
+
+
                 <div class="item__info-sizes ">
-                    <div class="item__info-title">Size:</div>
+                    <div class="item__info_btn_title">Size:</div>
 
-                        <form class="item__info_radio">
+                    <form class="item__info_radio">
 
-                            <input type="radio" id="size_52" name="size" value="size_52">
-                            <label for="size_52">Size 52</label>
+                        <input type="radio" id="size_52" name="size" value="size_52">
+                        <label for="size_52">Size 52</label>
 
-                            <input type="radio" id="size_54" name="size" value="size_54">
-                            <label for="size_54">Size 54</label>
+                        <input type="radio" id="size_54" name="size" value="size_54">
+                        <label for="size_54">Size 54</label>
 
-                            <input type="radio" id="size_56" name="size" value="size_56">
-                            <label for="size_56">Size 56</label>
+                        <input type="radio" id="size_56" name="size" value="size_56">
+                        <label for="size_56">Size 56</label>
 
-                        </form>
+                    </form>
 
                 </div>
                 <div class="item__info-colors">
-                    <div class="item__info-title">Color:</div>
+                    <div class="item__info_btn_title">Color:</div>
 
 
                     <form class="item__info_radio">
@@ -166,17 +187,21 @@
 
 </main>
 <div class="separator"></div>
-<div class="section__advertising section_row" >
+<div class="section__advertising section_row container__promo-blocks" id="adidasBlue">
     <div class="section__advertising_box">
-        <img src="img/adidas_blue.jpeg" class="section__advertising_img" id="adidasBlue">
+        <figure class="section__advertising_img-wrapper">
+        <img src="img/adidas_blue.jpeg" class="section__advertising_img" >
+        </figure>
         <div class="adidasBlue_title section__advertising_title ">Adidas Blue
             <div class="adidasBlue_subtitle section__advertising_subtitle"><span>For men</span></div>
         </div>
 
     </div>
 
-    <div class="section__advertising_box">
-        <img src="img/Repair_Patches.jpeg" class="section__advertising_img" id="repairPatches">
+    <div class="section__advertising_box" id="repairPatches">
+        <figure class="section__advertising_img-wrapper">
+        <img src="img/Repair_Patches.jpeg" class="section__advertising_img" >
+        </figure>
         <div class="repairPatches_title section__advertising_title">Repair Patches
             <div class="repairPatches_subtitle section__advertising_subtitle"><span>£ 150.50</span></div>
         </div>
@@ -184,14 +209,16 @@
 
     </div>
 
-    <div class="section__advertising_box">
-        <img src="img/Sale.jpeg" class="section__advertising_img" id="sale">
+    <div class="section__advertising_box"  id="sale">
+        <figure class="section__advertising_img-wrapper">
+        <img src="img/Sale.jpeg" class="section__advertising_img">
+        </figure>
         <div class="sale_title section__advertising_title">Sale
             <div class="sale_subtitle section__advertising_subtitle"><span>-70%</span></div>
         </div>
 
     </div>
-    </div>
+</div>
 
 <div class="separator"></div>
 <footer class="footer">
@@ -231,7 +258,7 @@
                 <div class="section_column footer__first_column feedback-column " id="border">
                     <p class="footer__column__title ">Questions</p>
 
-                    <p class="footer__column_info">
+                    <p class="footer__column_info" id="footerColumnInfoTweeter">
                         <img src="img/icons/twi_icon_grey.svg" class="footer__icon">Tweet us
                         <b>@template</b></p>
                 </div>
@@ -315,4 +342,5 @@
 </footer>
 
 </body>
+<script src="filter.js"></script>
 </html>

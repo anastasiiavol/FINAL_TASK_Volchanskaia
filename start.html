@@ -40,18 +40,29 @@
                         <li><a href="#">New Arrivals</a></li>
                         <li><a href="#">Clearance</a></li>
                         <li><a href="#">Store Locator</a></li>
+                        <form id="searchMobile" class="search__field">
+                            <input type="search" placeholder="Style Name">
+                        </form>
                     </ul>
                 </nav>
+
             </div>
 
             <div class="header__content_menu_search">
-                <div class="header__menu__search_container">
-                    <input type="text" id="inputSearchHeader" value="" placeholder="Style Name" id="searchBar"
-                           class="header__menu__search_input">
-                    <button class="header__menu__search_button"><img src="img/icons/search.svg"
-                                                                     class="header__menu_search_button_img">
+                <button class="header__menu__search_button" id="searchTablet">
+                        <span class="header__menu_search_button_text">Style name...</span>
+                        <img src="img/icons/search.svg" class="header__menu_search_button_img">
+
                     </button>
-                </div>
+
+                    <form id="searchDesktop" class="search__field">
+                        <input type="search" placeholder="Style Name">
+                    </form>
+               <!-- <form id="searchTablet" class="search__field">
+                    <input type="search" placeholder="Style Name">
+                </form>-->
+
+
             </div>
 
         </div> <!--header__content_menu-->
@@ -59,11 +70,11 @@
     </div> <!--header__section_direction-->
 
 <div id="headerMobile" class="container">
-
-            <div><a href="" class="header__logo" id="logoMobile">TL</a></div>
-            <div> <img src="img/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon">  Bag (0)</div>
-
-
+    <div class="header__content-logo-bag">
+            <div class="header__content-logo"><a href="" class="header__logo" id="logoMobile">TL</a></div>
+            <div class="header__content-bag"> <img src="img/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon">  Bag (0)</div>
+    </div>
+<div class="burger">
             <input class="menu__button" type="checkbox" id="menuBtn"/>
             <label class="menu__icon" for="menuBtn"><span class="menu__icon-lines"></span></label>
             <ul class="header__menu">
@@ -79,6 +90,7 @@
 
 </div>
 </div>
+</div>
 
 
 </header>
@@ -86,7 +98,7 @@
 <div class="separator"></div>
 
 <main>
-    <section class="section__banner section_row">
+    <section class="section__banner section_row container__promo-blocks">
         <div class="banner" id="firstBanner">
             <img src="img/banner_1.jpeg" alt="red_nike" class="banner__img">
             <div class="title__banner-name">Nike Red</div>
@@ -226,8 +238,8 @@
 </main>
 
 <footer class="footer">
-    <div class="footer__section_direction container">
-
+    <div class=" container ">
+    <div class="footer__section_direction" >
 
         <div class="footer__section-links ">
             <div class="section_row footer__section-links_first_column">
@@ -255,14 +267,16 @@
                 </div>
             </div>
         </div>
-        <div class="separator" id="separatorMobile"></div>
-        <div class="footer__section-feedback footer__section-feedback_container">
 
-            <div class="footer__section-feedback_direction">
+        <div class="separator" id="separatorMobile" ></div>
+
+        <div class="footer__section-feedback footer__section-feedback_container" >
+
+            <div class="footer__section-feedback_direction" >
                 <div class="section_column footer__first_column feedback-column " id="border">
                     <p class="footer__column__title ">Questions</p>
 
-                    <p class="footer__column_info">
+                    <p class="footer__column_info " id="footerColumnInfoTweeter">
                         <img src="img/icons/twi_icon_grey.svg" class="footer__icon">Tweet us
                         <b>@template</b></p>
                 </div>
@@ -290,8 +304,10 @@
 
 
     </div>
+    </div>
     <div class="separator"></div>
-    <div class="footer__section-bottom container">
+    <div class="container">
+    <div class="footer__section-bottom">
 
         <div class="section__copyright">
             <span class="copyright"> © 2010–2015, The Template Group inc.</span>
@@ -341,6 +357,7 @@
 
         </div>
 
+    </div>
     </div>
 
 </footer>
