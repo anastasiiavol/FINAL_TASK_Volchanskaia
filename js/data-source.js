@@ -1,10 +1,9 @@
 'use strict';
 
-const KEY_GOODS = "goods";
 const KEY_SHOPPING_BAG = "shoppingBag";
 const KEY_BEST_OFFER = "bestOffer";
 
-localStorage.setItem(KEY_SHOPPING_BAG, window.catalog);
+localStorage.setItem(KEY_SHOPPING_BAG, "");
 localStorage.setItem(KEY_BEST_OFFER, window.bestOffer);
 
 class DataSource {
@@ -13,15 +12,20 @@ class DataSource {
     shoppingBag = [];
 
     constructor() {
-        let goodsJSON = localStorage.getItem(KEY_GOODS);
-        this.goods = goodsJSON == null
-            ? []
-            : JSON.parse(goodsJSON).map(value => Object.assign(new Good(), value));
+        this.goods = window.catalog;
 
         let shoppingBagJSON = localStorage.getItem(KEY_SHOPPING_BAG);
-        this.shoppingBag = shoppingBagJSON == null
-            ? []
-            : JSON.parse(shoppingBagJSON).map(value => Object.assign(new ChoosenGood(), value));
+        try {
+            this.shoppingBag = JSON.parse(shoppingBagJSON).map(value => Object.assign(new ChoosenGood(), value));
+        } catch (e) {
+            this.shoppingBag = [];
+        }
+        //
+        // if (shoppingBagJSON == null) {
+        //     this.shoppingBag = [];
+        // } else {
+        //     this.shoppingBag = JSON.parse(shoppingBagJSON).map(value => Object.assign(new ChoosenGood(), value));
+        // }
     }
 
     getGoods() {
@@ -44,7 +48,10 @@ class DataSource {
         localStorage.setItem(KEY_SHOPPING_BAG, shoppingBag);
     }
 
-    clearShoppingBag(){
+    clearShoppingBag() {
         this.saveShoppingBag([]);
     }
 }
+
+var dataSource = new DataSource();
+console.log(dataSource);

@@ -20,7 +20,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-
+.item_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .container {
     width: 90%;
     max-width: 1180px;
