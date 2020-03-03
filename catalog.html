@@ -7,16 +7,12 @@
     <title>Сatalog</title>
 </head>
 <body>
-<!--<header class="header">
-
+<header class="header">
     <div class="header__section_direction " id="headerDesktop">
-
         <div class="header__content container ">
-
             <div class="header__content-logo-bag">
                 <div class="header__content-logo">
                     <div><a href="" class="header__logo" id="logoDesktop">Template</a></div>
-
                 </div>
                 <div class="header__content-bag">
                     <span class="header__content_bag-sing-up" id="signUp">E-mail sing up</span>
@@ -24,12 +20,11 @@
                 </div>
             </div>
 
-        </div> &lt;!&ndash;header__content&ndash;&gt;
+        </div>
 
         <div class="header__content_menu container ">
             <div class="navigation">
                 <nav>
-
                     <ul class="header__menu">
                         <li><a href="#">Women</a></li>
                         <li><a href="#">Men</a></li>
@@ -39,152 +34,404 @@
                         <li><a href="#">New Arrivals</a></li>
                         <li><a href="#">Clearance</a></li>
                         <li><a href="#">Store Locator</a></li>
+
                     </ul>
                 </nav>
             </div>
-
             <div class="header__content_menu_search">
-                <div class="header__menu__search_container">
-                    <input type="text" id="inputSearchHeader" value="" placeholder="Style Name" id="searchBar"
-                           class="header__menu__search_input">
-                    <button class="header__menu__search_button"><img src="img/icons/search.svg"
-                                                                     class="header__menu_search_button_img">
-                    </button>
+                <button class="header__menu__search_button" id="searchTablet">
+                    <span class="header__menu_search_button_text">Style name...</span>
+                    <img src="img/icons/search.svg" class="header__menu_search_button_img" alt="search">
+                </button>
+                <form id="searchDesktop" class="search__field">
+                    <input type="search" placeholder="Style Name">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper" id="headerMobile">
+        <div class="container">
+            <input type="checkbox" id="headerMenu">
+            <label for="headerMenu">
+                <div class="header__content-logo-bag">
+                    <div class="header__content-logo"><a href="" class="header__logo" id="logoMobile">TL</a></div>
+                    <div class="header__content-bag"><img src="img/icons/ico_bag.svg" alt="bag"
+                                                          class="header__content_bag-icon"> Bag (0)
+                    </div>
+                </div>
+            </label>
+
+            <div class="burger-line first"></div>
+            <div class="burger-line second"></div>
+            <div class="burger-line third"></div>
+            <div class="burger-line fourth"></div>
+            <nav class="header__menu-nav ">
+                <div class="container">
+                    <a href="#">Women</a>
+                    <a href="#">Men</a>
+                    <a href="#">Handbags</a>
+                    <a href="#">Accessories</a>
+                    <a href="#">Sale</a>
+                    <a href="#">New Arrivals</a>
+                    <a href="#">Clearance</a>
+                    <a href="#">Store Locator</a></div>
+                <form id="searchMobile" class="container">
+                    <input type="search" placeholder="Style Name" class="search__field">
+                </form>
+            </nav>
+        </div>
+    </div>
+
+</header>
+<main>
+    <div class="separator"></div>
+    <div class="container">
+        <div class="filter__body " id="filterDesktop">
+            <div class="filter__dropdown">
+                <button class="filter__dropdown_btn">
+                    <span class="filter__dropdown_title"> Fashion</span>
+                    <img src="img/icons/dropdown.svg" class="dropdown_icon-img" alt="dropdown_icon-img">
+                </button>
+                <ul class="dropdown-btn_content">
+                    <li id="resetSelect">Not selected</li>
+                    <li>Nail the 90s</li>
+                    <li>Casual style</li>
+                    <li>New Look</li>
+                    <li>Sport</li>
+                    <li>Vintage</li>
+                    <li>Classical style</li>
+                </ul>
+            </div>
+
+            <div class="filter__dropdown">
+                <button class="filter__dropdown_btn">
+                    <span class="filter__dropdown_title">Product type</span>
+                    <img src="img/icons/dropdown.svg" class="dropdown_icon-img" alt="dropdown_icon-img">
+                </button>
+                <ul class="dropdown-btn_content">
+                    <li>Not selected</li>
+                    <li>Coat & Jackets</li>
+                    <li>Dresses</li>
+                    <li>Jersey Tops</li>
+                </ul>
+            </div>
+            <div class="filter__dropdown">
+                <button class="filter__dropdown_btn">
+                    <span class="filter__dropdown_title">Color</span>
+                    <img src="img/icons/dropdown.svg" class="dropdown_icon-img" alt="dropdown_icon-img">
+                </button>
+                <ul class="dropdown-btn_content">
+                    <li>Not selected</li>
+                    <li>Black</li>
+                    <li>Blue</li>
+                    <li>Red</li>
+                    <li>Green</li>
+                    <li>Vintage</li>
+                    <li>Golden</li>
+                </ul>
+            </div>
+            <div class="filter__dropdown">
+                <button class="filter__dropdown_btn">
+                    <span class="filter__dropdown_title">Brand</span>
+                    <img src="img/icons/dropdown.svg" class="dropdown_icon-img" alt="dropdown_icon-img">
+                </button>
+                <ul class="dropdown-btn_content">
+                    <li>Not selected</li>
+                    <li>Chi Chi London</li>
+                    <li>Antipodium</li>
+                    <li>Adidas</li>
+                    <li>New Balance</li>
+                    <li>River Island</li>
+                    <li>Golden</li>
+                </ul>
+            </div>
+            <div class="filter__dropdown">
+                <button class="filter__dropdown_btn">
+                    <span class="filter__dropdown_title"> Size</span>
+                    <img src="img/icons/dropdown.svg" class="dropdown_icon-img" alt="dropdown_icon">
+                </button>
+                <ul class="dropdown-btn_content">
+                    <li>Not selected</li>
+                    <li>UK 2</li>
+                    <li>UK 18</li>
+                    <li>UK 18L</li>
+                    <li>UK 20</li>
+                    <li>UK20 L</li>
+                    <li>UK 20S</li>
+                    <li>UK 22S</li>
+                    <li>UK 22</li>
+                </ul>
+            </div>
+            <div class="filter__dropdown">
+                <button class="filter__dropdown_btn">
+                    <span class="filter__dropdown_title"> Category</span>
+                    <img src="img/icons/dropdown.svg" class="dropdown_icon-img" alt="dropdown_icon-img">
+                </button>
+                <ul class="dropdown-btn_content">
+                    <li>Not selected</li>
+                    <li>Black</li>
+                    <li>Blue</li>
+                    <li>Red</li>
+                    <li>Green</li>
+                    <li>Vintage</li>
+                    <li>Golden</li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div id="filterTabletMobile">
+            <div class="container wrapper">
+
+                <input type="checkbox" id="filterMenu">
+                <label for="filterMenu">
+                    <div class="filter__dropdown">
+                        <span>Fashion</span>
+                        <span>Product type</span>
+                        <span>Color</span>
+                        <span>Brand</span>
+                        <span>Category</span>
+                        <img src="img/icons/dropdown.svg" class="dropdown_icon-img" alt="dropdown_icon">
+                    </div>
+                </label>
+                <div class="burger-line first"></div>
+                <div class="burger-line second"></div>
+                <div class="burger-line third"></div>
+                <div class="burger-line fourth"></div>
+
+                <div class="filter__dropdown-menu">
+                    <div class="filter__dropdown-menu-section">
+                        <span class="filter__section-title">Fashion</span>
+                        <ul class="dropdown-btn_content">
+                            <li>Not selected</li>
+                            <li>Nail the 90s</li>
+                            <li>Casual style</li>
+                            <li>New Look</li>
+                            <li>Sport</li>
+                            <li>Vintage</li>
+                            <li>Classical style</li>
+                        </ul>
+                    </div>
+                    <div class="filter__dropdown-menu-section">
+                        <span class="filter__section-title">Product type</span>
+                        <ul class="dropdown-btn_content">
+                            <li>Not selected</li>
+                            <li>Coat & Jackets</li>
+                            <li>Dresses</li>
+                            <li>Jersey Tops</li>
+                        </ul>
+                    </div>
+                    <div class="filter__dropdown-menu-section">
+                        <span class="filter__section-title">Color</span>
+                        <ul class="dropdown-btn_content">
+                            <li>Not selected</li>
+                            <li>Black</li>
+                            <li>Blue</li>
+                            <li>Red</li>
+                            <li>Green</li>
+                            <li>Vintage</li>
+                            <li>Golden</li>
+                        </ul>
+                    </div>
+                    <div class="filter__dropdown-menu-section">
+                        <span class="filter__section-title">Brand</span>
+                        <ul class="dropdown-btn_content">
+                            <li>Not selected</li>
+                            <li>Chi Chi London</li>
+                            <li>Antipodium</li>
+                            <li>Adidas</li>
+                            <li>New Balance</li>
+                            <li>River Island</li>
+                            <li>Golden</li>
+                        </ul>
+                    </div>
+                    <div class="filter__dropdown-menu-section">
+                        <span class="filter__section-title">Size</span>
+                        <ul class="dropdown-btn_content">
+                            <li>Not selected</li>
+                            <li>UK 2</li>
+                            <li>UK 18</li>
+                            <li>UK 18L</li>
+                            <li>UK 20</li>
+                            <li>UK 20 L</li>
+                            <li>UK 20S</li>
+                            <li>UK 22S</li>
+                            <li>UK 22</li>
+                        </ul>
+                    </div>
+                    <div class="filter__dropdown-menu-section">
+                        <span class="filter__section-title">Price Range</span>
+                        <ul class="dropdown-btn_content">
+                            <li>Not selected</li>
+                            <li>To £99</li>
+                            <li>£100-£299</li>
+                            <li>From £300</li>
+                        </ul>
+                    </div>
+
+
                 </div>
             </div>
 
-        </div> &lt;!&ndash;header__content_menu&ndash;&gt;
-
-    </div> &lt;!&ndash;header__section_direction&ndash;&gt;
-
-    <div id="headerMobile" class="container">
-
-        <div class="section_row">
-            <div><a href="" class="header__logo" id="logoMobile">TL</a></div>
-            <div><img src="img/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon"> Bag (0)</div>
         </div>
-
-
-        <input class="menu__button" type="checkbox" id="menuBtn"/>
-        <label class="menu__icon" for="menuBtn"><span class="menu__icon-lines"></span></label>
-        <ul class="header__menu">
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Men</a></li>
-            <li><a href="#">Handbags</a></li>
-            <li><a href="#">Accessories</a></li>
-            <li><a href="#">Sale</a></li>
-            <li><a href="#">New Arrivals</a></li>
-            <li><a href="#">Clearance</a></li>
-            <li><a href="#">Store Locator</a></li>
-        </ul>
-
     </div>
-    </div>
-
-
-</header>-->
-<main>
-    <div class="separator"></div>
-<!--    <div class="container">
-        <div class="filter__body " id="filterDesktop">
-            <div class="filter__dropdown">
-                <button class="filter__dropdown_btn">Fashion</button>
-                <ul class="dropdown-btn_content">
-                    <li href="#">Not selected</li>
-                    <li href="#">Nail the 90s</li>
-                    <li href="#">Casual style</li>
-                    <li href="#">New Look</li>
-                    <li href="#">Sport</li>
-                    <li href="#">Vintage</li>
-                    <li href="#">Classical style</li>
-                </ul>
-            </div>
-
-            <div class="filter__dropdown">
-                <button class="filter__dropdown_btn">Product type</button>
-                <ul class="dropdown-btn_content">
-                    <li href="#">Not selected</li>
-                    <li href="#">Coat & Jackets</li>
-                    <li href="#">Dresses</li>
-                    <li href="#">Jersey Tops</li>
-                </ul>
-            </div>
-            <div class="filter__dropdown">
-                <button class="filter__dropdown_btn">Color</button>
-                <ul class="dropdown-btn_content">
-                    <li href="#">Not selected</li>
-                    <li href="#">Black</li>
-                    <li href="#">Blue</li>
-                    <li href="#">Red</li>
-                    <li href="#">Green</li>
-                    <li href="#">Vintage</li>
-                    <li href="#">Golden</li>
-                </ul>
-            </div>
-            <div class="filter__dropdown">
-                <button class="filter__dropdown_btn">Brand</button>
-                <ul class="dropdown-btn_content">
-                    <li href="#">Not selected</li>
-                    <li href="#">Chi Chi London</li>
-                    <li href="#">Antipodium</li>
-                    <li href="#">Adidas</li>
-                    <li href="#">New Balance</li>
-                    <li href="#">River Island</li>
-                    <li href="#">Golden</li>
-                </ul>
-            </div>
-            <div class="filter__dropdown">
-                <button class="filter__dropdown_btn">Size</button>
-                <ul class="dropdown-btn_content">
-                    <li href="#">Not selected</li>
-                    <li href="#">UK 2</li>
-                    <li href="#">UK 18</li>
-                    <li href="#">UK 18L</li>
-                    <li href="#">UK 20</li>
-                    <li href="#">UK20 L</li>
-                    <li href="#">UK 20S</li>
-                    <li href="#">UK 22S</li>
-                    <li href="#">UK 22</li>
-                </ul>
-            </div>
-            <div class="filter__dropdown">
-                <button class="filter__dropdown_btn">Category</button>
-                <ul class="dropdown-btn_content">
-                    <li href="#">Not selected</li>
-                    <li href="#">Black</li>
-                    <li href="#">Blue</li>
-                    <li href="#">Red</li>
-                    <li href="#">Green</li>
-                    <li href="#">Vintage</li>
-                    <li href="#">Golden</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>-->
     <div class="separator"></div>
     <div class="container" id="goodsContainer">
 
     </div>
 </main>
-<script src="filter.js"></script>
-<script src="js/lodash.js"></script>
-<script id="template-good-item" type="text/template">
-    <div class="item center-column" id="item1NewArrivals">
-        <div class="item__picture_container">
-            <img src="<%- thumbnail %>" alt="Image" class="item__picture">
-            <div class="item__picture_hover-text">View item</div>
+<div class="separator"></div>
+<footer class="footer">
+    <div class=" container ">
+        <div class="footer__section_direction">
+
+            <div class="footer__section-links ">
+                <div class="section_row footer__section-links_first_column">
+                    <div class="section_column footer__first_column">
+                        <p class="footer__column__title ">Quick Links</p>
+                        <ul class="footer__column__list">
+                            <li><a>Store locator</a></li>
+                            <li><a>Gift Cards</a></li>
+                            <li><a>Size guide</a></li>
+                            <li><a>About us</a></li>
+                            <li><a>Gift Cards</a></li>
+                            <li><a>Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="section_column footer__section_column_right">
+                        <p class="footer__column__title ">Customer Care</p>
+                        <ul class="footer__column__list">
+                            <li><a>Customer service</a></li>
+                            <li><a>Track my order</a></li>
+                            <li><a>Return policy</a></li>
+                            <li><a>Shipping & delivery</a></li>
+                            <li><a>Contact us</a></li>
+                            <li><a>Careers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="separator" id="separatorMobile"></div>
+
+            <div class="footer__section-feedback footer__section-feedback_container">
+
+                <div class="footer__section-feedback_direction">
+                    <div class="section_column footer__first_column feedback-column " id="border">
+                        <p class="footer__column__title ">Questions</p>
+
+                        <p class="footer__column_info " id="footerColumnInfoTweeter">
+                            <img src="img/icons/twi_icon_grey.svg" class="footer__icon" alt="footer__icon">Tweet us
+                            <b>@template</b></p>
+                    </div>
+
+                    <div class="section_column feedback-column footer__section_column_right">
+                        <p class="footer__column__title ">Order by phone</p>
+                        <p class="footer__column_info">8-800-409-47-12</p>
+                    </div>
+                </div>
+
+                <div class="footer__column__info_delivery">
+                    We have our own delivery service
+                    which operates in 23 major European cities.
+                    Delivery time - 3-5 days.
+                </div>
+
+                <div class="footer___section_icons section_row" id="footerSectionIconsDesktopTablet">
+                    <img src="img/icons/facebook_icon.svg " class="footer__icon " alt="footer__icon">
+                    <img src="img/icons/twi_icon_blue.svg" class="footer__icon" alt="footer__icon">
+                </div>
+
+            </div>
+
         </div>
-        <div class="item__info">
-            <p class="item__title"><%-title%></p>
-            <p class="item__price">£<%-price%></p>
+
+
+    </div>
+
+    <div class="separator"></div>
+    <div class="container">
+        <div class="footer__section-bottom">
+
+            <div class="section__copyright">
+                <span class="copyright"> © 2010–2015, The Template Group inc.</span>
+            </div>
+            <div class="section__sharing">
+                <span class="footer__share-icon">Share</span>
+                <div class="section__sharing_image">
+                    <img src="img/icons/share.svg" class="footer_share_img" alt="footer_share_img">
+                    <div class="share_text">1437</div>
+                </div>
+            </div>
+            <div class="section__policy">
+                <a>Legal notice</a>
+                <a href="#">Privacy policy </a>
+                <a href="#">Site map</a>
+
+            </div>
+        </div>
+
+        <div class="footer__section-bottom-mobile  ">
+            <div class="section__bottom_first container">
+                <div class="section__bottom_text section__policy">
+                    <a href="#">Legal notice</a>
+                    <a href="#">Privacy policy </a>
+                    <a href="#">Site map</a>
+                </div>
+                <div class="footer___section_icons section_row">
+                    <img src="img/icons/facebook_icon.svg " class="section__bottom__footer__icon" alt="footer__icon">
+                    <img src="img/icons/twi_icon_blue.svg" class="footer__icon" alt="footer__icon">
+                </div>
+
+            </div>
+            <div class="separator"></div>
+
+            <div class="section__bottom_second container">
+                <div class="section__copyright">
+                    <span class="section__bottom_text"> © 2010–2015, The Template Group inc.</span>
+                </div>
+
+                <div class="section__sharing">
+                    <span class="footer__share-icon">Share</span>
+                    <div class="section__sharing_image">
+                        <img src="img/icons/share.svg" class="footer_share_img" alt="footer_share_img">
+                        <div class="share_text">1437</div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
     </div>
+
+</footer>
+<script src="js/filter.js"></script>
+<script src="js/lodash.js"></script>
+<script id="template-good-item" type="text/template">
+    <a href="item.html">
+        <div class="item ">
+            <div class="item__picture_container center-column">
+                <div><img src="<%- thumbnail %>" alt="Image" class="item__picture">
+                    <% if (hasNew){ %>
+                        <div>n,j</div>
+                    <% } %>
+                </div>
+                <div class="item__picture_hover-text">View item</div>
+                <div class="item__info">
+                    <div class="item__title"><%-title%></div>
+                    <p class="item__price">£<%-price%></p>
+                </div>
+            </div>
+        </div>
+    </a>
 </script>
+
 </body>
 <script src="data/catalog.js"></script>
-<script src="js/data-source.js"></script>
-<script src="js/card-good.js"></script>
-<script src="js/catalog.js"></script>
+<script src="dist/data-source.js"></script>
+<script src="dist/card-good.js"></script>
+<script src="dist/catalog.js"></script>
 </html>
 

@@ -1,0 +1,26 @@
+{
+  "name": "FINAL_TASK_Volchanskaia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/filter.js",
+  "scripts": {
+    "build": "babel js -d dist --presets es2015",
+    "watch": "babel js -d dist --presets es2015 -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anastasiiavol/FINAL_TASK_Volchanskaia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anastasiiavol/FINAL_TASK_Volchanskaia/issues"
+  },
+  "homepage": "https://github.com/anastasiiavol/FINAL_TASK_Volchanskaia#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}

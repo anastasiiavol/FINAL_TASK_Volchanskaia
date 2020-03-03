@@ -5,11 +5,15 @@ const MAX_COLUMNS_COUNT_MOBILE = 2;
 const MAX_COLUMNS_COUNT_TABLET = 3;
 const MAX_COLUMNS_COUNT_DESKTOP = 4;
 
+const WIDTH_PHONE = 768;
+const WIDTH_TABLET = 1024;
+
 function createCard(template, good) {
     let data = {
         title: good.title,
         thumbnail: good.thumbnail,
-        price: good.discountedPrice || good.price
+        price: good.discountedPrice || good.price,
+        hasNew: good.hasNew
     };
     let card = document.createElement("div");
     card.innerHTML = template(data);

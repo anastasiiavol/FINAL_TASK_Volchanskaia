@@ -9,15 +9,11 @@
 <body>
 
 <header class="header"  >
-
     <div class="header__section_direction " id="headerDesktop">
-
         <div class="header__content container ">
-
             <div class="header__content-logo-bag">
                 <div class="header__content-logo">
                     <div><a href="" class="header__logo" id="logoDesktop">Template</a></div>
-
                 </div>
                 <div class="header__content-bag">
                     <span class="header__content_bag-sing-up" id="signUp">E-mail sing up</span>
@@ -25,12 +21,11 @@
                 </div>
             </div>
 
-        </div> <!--header__content-->
+        </div>
 
         <div class="header__content_menu container ">
             <div class="navigation">
                 <nav>
-
                     <ul class="header__menu">
                         <li><a href="#">Women</a></li>
                         <li><a href="#">Men</a></li>
@@ -40,58 +35,52 @@
                         <li><a href="#">New Arrivals</a></li>
                         <li><a href="#">Clearance</a></li>
                         <li><a href="#">Store Locator</a></li>
-                        <form id="searchMobile" class="search__field">
-                            <input type="search" placeholder="Style Name">
-                        </form>
+
                     </ul>
                 </nav>
-
             </div>
-
             <div class="header__content_menu_search">
                 <button class="header__menu__search_button" id="searchTablet">
                         <span class="header__menu_search_button_text">Style name...</span>
                         <img src="img/icons/search.svg" class="header__menu_search_button_img">
-
                     </button>
-
                     <form id="searchDesktop" class="search__field">
                         <input type="search" placeholder="Style Name">
                     </form>
-               <!-- <form id="searchTablet" class="search__field">
-                    <input type="search" placeholder="Style Name">
-                </form>-->
-
-
             </div>
-
-        </div> <!--header__content_menu-->
-
-    </div> <!--header__section_direction-->
-
-<div id="headerMobile" class="container">
-    <div class="header__content-logo-bag">
-            <div class="header__content-logo"><a href="" class="header__logo" id="logoMobile">TL</a></div>
-            <div class="header__content-bag"> <img src="img/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon">  Bag (0)</div>
+        </div>
     </div>
-<div class="burger">
-            <input class="menu__button" type="checkbox" id="menuBtn"/>
-            <label class="menu__icon" for="menuBtn"><span class="menu__icon-lines"></span></label>
-            <ul class="header__menu">
-                <li><a href="#">Women</a></li>
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Handbags</a></li>
-                <li><a href="#">Accessories</a></li>
-                <li><a href="#">Sale</a></li>
-                <li><a href="#">New Arrivals</a></li>
-                <li><a href="#">Clearance</a></li>
-                <li><a href="#">Store Locator</a></li>
-            </ul>
 
-</div>
-</div>
-</div>
+    <div class="wrapper" id="headerMobile">
+        <div class="container">
+            <input type="checkbox" id="headerMenu">
+            <label for="headerMenu">
+                <div class="header__content-logo-bag">
+                    <div class="header__content-logo"><a href="" class="header__logo" id="logoMobile">TL</a></div>
+                    <div class="header__content-bag"> <img src="img/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon">  Bag (0)</div>
+                </div>
+            </label>
 
+                <div class="burger-line first"></div>
+                <div class="burger-line second"></div>
+                <div class="burger-line third"></div>
+                <div class="burger-line fourth"></div>
+            <nav class="header__menu-nav ">
+                <div class="container">
+                <a href="#">Women</a>
+                <a href="#">Men</a>
+                <a href="#">Handbags</a>
+                <a href="#">Accessories</a>
+                <a href="#">Sale</a>
+                <a href="#">New Arrivals</a>
+                <a href="#">Clearance</a>
+                <a href="#">Store Locator</a></div>
+                <form id="searchMobile" class="container">
+                    <input type="search" placeholder="Style Name" class="search__field">
+                </form>
+            </nav>
+        </div>
+    </div>
 
 </header>
 
@@ -100,15 +89,15 @@
 <main>
     <section class="section__banner section_row container__promo-blocks">
         <div class="banner" id="firstBanner">
-            <img src="img/banner_1.jpeg" alt="red_nike" class="banner__img">
-            <div class="title__banner-name">Nike Red</div>
+          <a href="item.html"> <img src="img/banner_1.jpeg" alt="red_nike" class="banner__img"></a>
+            <a href="item.html"> <div class="title__banner-name">Nike Red</div></a>
         </div>
         <div class="banner" id="secondBanner">
-            <img src="img/banner_2.jpeg" alt="Caps & Hats" class="banner__img">
-            <div class="title__banner-name">Caps & Hats
+            <a href="catalog.html"> <img src="img/banner_2.jpeg" alt="Caps & Hats" class="banner__img"></a>
+            <a href="catalog.html">  <div class="title__banner-name">Caps & Hats
                 <div class="subtitle__banner-name">Sale -50%</div>
             </div>
-
+            </a>
         </div>
     </section>
 
@@ -363,5 +352,5 @@
 </footer>
 
 </body>
-<script src="js/lodash.js"></script>
+<script src="dist/lodash.js"></script>
 </html>

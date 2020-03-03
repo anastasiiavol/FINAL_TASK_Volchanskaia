@@ -6,6 +6,13 @@ let filterCategory = "women";
 let filterFashion = "casual style";
 let previousColumnsCount = 0;
 
+window.onload = () => {
+    renderGoods(getGoods(), createBanner());
+};
+window.onresize = () => {
+    renderGoods(getGoods(), createBanner());
+};
+
 function getGoods() {
     let goods = [...dataSource.getGoods()];
     goods = _.filter(goods, (good) => good.category.toLowerCase() === filterCategory.toLowerCase());
@@ -13,13 +20,6 @@ function getGoods() {
     goods = _.sortBy(goods, (good) => good.dateAdded).reverse();
     return goods;
 }
-
-window.onload = () => {
-    renderGoods(getGoods(), createBanner());
-};
-window.onresize = () => {
-    renderGoods(getGoods(), createBanner());
-};
 
 function clearContainer(container) {
     while (container.firstChild) {
@@ -31,12 +31,72 @@ function createBanner() {
     let banner = document.createElement("div");
     banner.setAttribute("class", "catalog__banner");
 
-    let bannerTitle = document.createTextNode("Last week extra50% off on al reduced boots and shoulder bags");
+    let bannerTitle = document.createElement("div");
+    let bannerTitleMain = document.createElement("span");
+    bannerTitleMain.setAttribute("class", "catalog__banner-main-text");
+    let bannerTitleTextMain = document.createTextNode("extra 50% ");
+
+    let bannerTitleTextStart = document.createTextNode("Last weekend ");
+
+    let bannerTitleTextMainEnd = document.createTextNode("off on all reduced boots and shoulder bags");
+    bannerTitle.appendChild(bannerTitleMain);
+    bannerTitle.appendChild(bannerTitleTextStart);
+    bannerTitle.appendChild(bannerTitleMain);
+    bannerTitleMain.appendChild(bannerTitleTextMain);
+    bannerTitle.appendChild(bannerTitleTextMainEnd);
+
+    bannerTitle.setAttribute("class", "catalog__banner-title");
+
     banner.appendChild(bannerTitle);
 
-    let bannerSubtitle = document.createTextNode("aaaaaaaaaaaaaaaaaaa");
+    let bannerSubtitle = document.createElement("p");
+    let bannerSubtitleText = document.createTextNode("This offer is valid in-store and online. " +
+        "Prices displayed reflect this additional discount." +
+        " This offer ends at 11:59 GMT on March 1st 2019");
+    bannerSubtitle.appendChild(bannerSubtitleText);
+    bannerSubtitle.setAttribute("class", "catalog__banner-subtitle");
     banner.appendChild(bannerSubtitle);
     return banner;
+}
+
+function renderGoods(goods, banner) {
+    let columnsCount = defineColumnsCount();
+    if (previousColumnsCount === columnsCount) {
+        return;
+    }
+    previousColumnsCount = columnsCount;
+
+    let goodsCount = Math.min(goods.length, definePageSize(columnsCount));
+    let rowsCount = Math.ceil(goodsCount / columnsCount);
+    let rows = createRows(rowsCount, columnsCount, goodsCount, goods);
+
+    rows.splice(1, 0, banner);
+    rowsCount = rows.length;
+
+    let container = document.getElementById("goodsContainer");
+
+    clearContainer(container);
+    for (let i = 0; i < rowsCount; i++) {
+        container.appendChild(rows[i]);
+    }
+}
+
+function createRows(rowsCount, columnsCount, goodsCount, goods) {
+    let rows = [];
+
+    let template = _.template(document.getElementById('template-good-item').innerHTML);
+
+    let goodIndex = 0;
+    for (let row = 0; row < rowsCount; row++) {
+        let cards = [];
+        for (let column = 0; column < columnsCount && goodIndex < goodsCount; column++, goodIndex++) {
+            let good = goods[goodIndex];
+            let card = createCard(template, good);
+            cards.push(card);
+        }
+        rows.push(createRow(cards));
+    }
+    return rows;
 }
 
 function definePageSize(columnsCount) {
@@ -45,39 +105,9 @@ function definePageSize(columnsCount) {
     else return PAGE_SIZE_MOBILE;
 }
 
-function renderGoods(goods, banner) {
-    let columnsCount = Math.min(
-        MAX_COLUMNS_COUNT_DESKTOP,
-        Math.round(window.innerWidth / (CARD_WIDTH + CARD_MARGIN * 2))
-    );
-    if (previousColumnsCount === columnsCount) {
-        return;
-    }
-    previousColumnsCount = columnsCount;
-
-    let goodsCount = Math.min(goods.length, definePageSize(columnsCount));
-    let rowsCount = Math.ceil(goodsCount / columnsCount);
-    let rows = [];
-
-    let template = _.template(document.getElementById('template-good-item').innerHTML);
-
-    let k = 0;
-    for (let i = 0; i < rowsCount; i++) {
-        let cards = [];
-        for (let j = 0; j < columnsCount && k < goodsCount; j++, k++) {
-            let good = goods[k];
-            let card = createCard(template, good);
-            cards.push(card);
-        }
-        rows.push(createRow(cards));
-    }
-
-    rows.splice(1, 0, banner);
-    rowsCount = rows.length;
-
-    let container = document.getElementById("goodsContainer");
-    clearContainer(container);
-    for (let i = 0; i < rowsCount; i++) {
-        container.appendChild(rows[i]);
-    }
+function defineColumnsCount() {
+    let width = window.innerWidth;
+    if (width > WIDTH_TABLET) return MAX_COLUMNS_COUNT_DESKTOP;
+    else if (width > WIDTH_PHONE) return MAX_COLUMNS_COUNT_TABLET;
+    else return MAX_COLUMNS_COUNT_MOBILE;
 }

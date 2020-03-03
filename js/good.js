@@ -2,20 +2,6 @@
 const DISCOUNT = 15;
 
 class Good {
-    id;
-    dateAdded;
-    title;
-    description;
-    discountedPrice;
-    price;
-    hasNew;
-    category;
-    fashion;
-    colors;
-    sizes;
-    thumbnail;
-    preview;
-
     constructor(
         id,
         dateAdded,

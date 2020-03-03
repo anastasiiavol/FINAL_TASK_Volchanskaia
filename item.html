@@ -9,15 +9,11 @@
 </head>
 <body>
 <header class="header">
-
     <div class="header__section_direction " id="headerDesktop">
-
         <div class="header__content container ">
-
             <div class="header__content-logo-bag">
                 <div class="header__content-logo">
                     <div><a href="" class="header__logo" id="logoDesktop">Template</a></div>
-
                 </div>
                 <div class="header__content-bag">
                     <span class="header__content_bag-sing-up" id="signUp">E-mail sing up</span>
@@ -25,12 +21,11 @@
                 </div>
             </div>
 
-        </div> <!--header__content-->
+        </div>
 
         <div class="header__content_menu container ">
             <div class="navigation">
                 <nav>
-
                     <ul class="header__menu">
                         <li><a href="#">Women</a></li>
                         <li><a href="#">Men</a></li>
@@ -40,60 +35,54 @@
                         <li><a href="#">New Arrivals</a></li>
                         <li><a href="#">Clearance</a></li>
                         <li><a href="#">Store Locator</a></li>
-                        <form id="searchMobile" class="search__field">
-                            <input type="search" placeholder="Style Name">
-                        </form>
+
                     </ul>
                 </nav>
-
             </div>
-
             <div class="header__content_menu_search">
                 <button class="header__menu__search_button" id="searchTablet">
                     <span class="header__menu_search_button_text">Style name...</span>
                     <img src="img/icons/search.svg" class="header__menu_search_button_img">
-
                 </button>
-
                 <form id="searchDesktop" class="search__field">
                     <input type="search" placeholder="Style Name">
                 </form>
-                <!-- <form id="searchTablet" class="search__field">
-                     <input type="search" placeholder="Style Name">
-                 </form>-->
-
-
-            </div>
-
-        </div> <!--header__content_menu-->
-
-    </div> <!--header__section_direction-->
-
-    <div id="headerMobile" class="container">
-        <div class="header__content-logo-bag">
-            <div class="header__content-logo"><a href="" class="header__logo" id="logoMobile">TL</a></div>
-            <div class="header__content-bag"><img src="img/icons/ico_bag.svg" alt="bag"
-                                                  class="header__content_bag-icon"> Bag (0)
             </div>
         </div>
-        <div class="burger">
-            <input class="menu__button" type="checkbox" id="menuBtn"/>
-            <label class="menu__icon" for="menuBtn"><span class="menu__icon-lines"></span></label>
-            <ul class="header__menu">
-                <li><a href="#">Women</a></li>
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Handbags</a></li>
-                <li><a href="#">Accessories</a></li>
-                <li><a href="#">Sale</a></li>
-                <li><a href="#">New Arrivals</a></li>
-                <li><a href="#">Clearance</a></li>
-                <li><a href="#">Store Locator</a></li>
-            </ul>
+    </div>
 
+    <div class="wrapper" id="headerMobile">
+        <div class="container">
+            <input type="checkbox" id="headerMenu">
+            <label for="headerMenu">
+                <div class="header__content-logo-bag">
+                    <div class="header__content-logo"><a href="" class="header__logo" id="logoMobile">TL</a></div>
+                    <div class="header__content-bag"><img src="img/icons/ico_bag.svg" alt="bag"
+                                                          class="header__content_bag-icon"> Bag (0)
+                    </div>
+                </div>
+            </label>
+
+            <div class="burger-line first"></div>
+            <div class="burger-line second"></div>
+            <div class="burger-line third"></div>
+            <div class="burger-line fourth"></div>
+            <nav class="header__menu-nav ">
+                <div class="container">
+                    <a href="#">Women</a>
+                    <a href="#">Men</a>
+                    <a href="#">Handbags</a>
+                    <a href="#">Accessories</a>
+                    <a href="#">Sale</a>
+                    <a href="#">New Arrivals</a>
+                    <a href="#">Clearance</a>
+                    <a href="#">Store Locator</a></div>
+                <form id="searchMobile" class="container">
+                    <input type="search" placeholder="Style Name" class="search__field">
+                </form>
+            </nav>
         </div>
     </div>
-    </div>
-
 
 </header>
 <div class="separator"></div>
@@ -105,46 +94,42 @@
     <div class="">
         <div class="container item__section">
 
-            <!-- <div class="item__gallery">
-                 <div id="switcher-wrap">
-                     <a id="one" class="image-link" href="#"><img src="img/item_1/item_1__thumb_0.jpeg"></a>
-                     <a id="two" class="image-link" href="#"><img src="img/item_1/item_1__thumb_1.jpeg"></a>
-                     <a id="three" class="image-link" href="#"><img src="img/item_1/item_1__thumb_2.jpeg"></a>
 
-                 </div>
-             </div>-->
+                        <div class="item__gallery container">
+                            <div class="item__gallery_main-img"><img src="img/item_1/item_1__full_0.jpeg" id="galleryMain" class="gallery__main"></div>
 
-            <div class="item__gallery container">
-                <div class="item__gallery_main-img"><img src="img/item_1/item_1__full_0.jpeg" id="galleryMain"></div>
+                            <div class="gallery__img-buttons">
+                                <div class="gallery__img_btn">
+                                    <img src="img/item_1/item_1__thumb_0.jpeg" class="gallery__img_btn-mini"
+                                         onclick="showImage('img/item_1/item_1__full_0.jpeg');">
+                                </div>
+                                <div class="gallery__img_btn">
+                                    <img src="img/item_1/item_1__thumb_1.jpeg " class="gallery__img_btn-mini"
+                                         onclick="showImage('img/item_1/item_1__full_1.jpeg');">
+                                </div>
+                                <div class="gallery__img_btn">
+                                    <img src="img/item_1/item_1__thumb_2.jpeg" class="gallery__img_btn-mini"
+                                         onclick="showImage('img/item_1/item_1__full_2.jpeg');">
+                                </div>
+                            </div>
 
-                <div class="gallery__img-buttons ">
-                    <div class="gallery__img_btn">
-                        <img src="img/item_1/item_1__thumb_0.jpeg" class="gallery__img_btn-mini">
-                    </div>
-                    <div class="gallery__img_btn">
-                        <img src="img/item_1/item_1__thumb_1.jpeg " class="gallery__img_btn-mini">
-                    </div>
-                    <div class="gallery__img_btn">
-                        <img src="img/item_1/item_1__thumb_2.jpeg" class="gallery__img_btn-mini">
-                    </div>
-                </div>
-
-            </div>
+                        </div>
 
 
             <div class="item__info_section item__section_direction">
                 <div class="item__info-title">Dark classic fit suit</div>
-                <div class="item__info-description" id="itemInfoDescriptionDesktop">Featuring fine Italian wool, this elegant suit has pick-stitch
+                <div class="item__info-description" id="itemInfoDescriptionDesktop">Featuring fine Italian wool, this
+                    elegant suit has pick-stitch
                     edging, cascade buttons at the cuffs and a subtle stripe pattern throughout.
                 </div>
                 <div class="item__info-price" id="itemInfoPriceDesktop">£180.60</div>
 
 
                 <div class="item__info-price" id="itemInfoPriceTabletMobile">£180.60</div>
-                <div class="item__info-description" id="itemInfoDescriptionTabletMobile">Featuring fine Italian wool, this elegant suit has pick-stitch
+                <div class="item__info-description" id="itemInfoDescriptionTabletMobile">Featuring fine Italian wool,
+                    this elegant suit has pick-stitch
                     edging, cascade buttons at the cuffs and a subtle stripe pattern throughout.
                 </div>
-
 
 
                 <div class="item__info-sizes ">
@@ -190,7 +175,7 @@
 <div class="section__advertising section_row container__promo-blocks" id="adidasBlue">
     <div class="section__advertising_box">
         <figure class="section__advertising_img-wrapper">
-        <img src="img/adidas_blue.jpeg" class="section__advertising_img" >
+            <img src="img/adidas_blue.jpeg" class="section__advertising_img">
         </figure>
         <div class="adidasBlue_title section__advertising_title ">Adidas Blue
             <div class="adidasBlue_subtitle section__advertising_subtitle"><span>For men</span></div>
@@ -200,7 +185,7 @@
 
     <div class="section__advertising_box" id="repairPatches">
         <figure class="section__advertising_img-wrapper">
-        <img src="img/Repair_Patches.jpeg" class="section__advertising_img" >
+            <img src="img/Repair_Patches.jpeg" class="section__advertising_img">
         </figure>
         <div class="repairPatches_title section__advertising_title">Repair Patches
             <div class="repairPatches_subtitle section__advertising_subtitle"><span>£ 150.50</span></div>
@@ -209,9 +194,9 @@
 
     </div>
 
-    <div class="section__advertising_box"  id="sale">
+    <div class="section__advertising_box" id="sale">
         <figure class="section__advertising_img-wrapper">
-        <img src="img/Sale.jpeg" class="section__advertising_img">
+            <img src="img/Sale.jpeg" class="section__advertising_img">
         </figure>
         <div class="sale_title section__advertising_title">Sale
             <div class="sale_subtitle section__advertising_subtitle"><span>-70%</span></div>
@@ -342,5 +327,11 @@
 </footer>
 
 </body>
-<script src="filter.js"></script>
+<script>
+    function showImage(imgName) {
+        let curImage = document.getElementById('galleryMain');
+        curImage.src = imgName;
+    }
+</script>
+<script src="js/filter.js"></script>
 </html>

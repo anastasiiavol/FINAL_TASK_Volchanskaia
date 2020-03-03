@@ -1,21 +1,7 @@
 'use strict';
 const DISCOUNT = 15;
 
-class ChoosenGood {
-    id;
-    dateAdded;
-    title;
-    description;
-    discountedPrice;
-    price;
-    hasNew;
-    category;
-    fashion;
-    color;
-    size;
-    thumbnail;
-    preview;
-    quantity;
+class ChosenGood {
 
     constructor(
         id,
@@ -47,5 +33,22 @@ class ChoosenGood {
         this.thumbnail = thumbnail;
         this.preview = preview;
         this.quantity = quantity;
+    }
+
+    static new(good, color, size) {
+        this.id = good.id;
+        this.dateAdded = good.dateAdded;
+        this.title = good.title;
+        this.description = good.description;
+        this.discountedPrice = good.discountedPrice;
+        this.price = good.price;
+        this.hasNew = good.hasNew;
+        this.category = good.category;
+        this.fashion = good.fashion;
+        this.color = color;
+        this.size = size;
+        this.thumbnail = good.thumbnail;
+        this.preview = good.preview;
+        this.quantity = 0;
     }
 }
