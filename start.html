@@ -13,11 +13,12 @@
         <div class="header__content container ">
             <div class="header__content-logo-bag">
                 <div class="header__content-logo">
-                    <div><a href="" class="header__logo" id="logoDesktop">Template</a></div>
+                    <h1><a href="start.html" class="header__logo" id="logoDesktop">Template</a></h1>
                 </div>
                 <div class="header__content-bag">
                     <span class="header__content_bag-sing-up" id="signUp">E-mail sing up</span>
-                    <span> <img src="img/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon">  Bag (0) </span>
+                    <a href="shopping-bag.html"> <span> <img src="img/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon">  Bag (0) </span></a>
+
                 </div>
             </div>
 
@@ -26,7 +27,7 @@
         <div class="header__content_menu container ">
             <div class="navigation">
                 <nav>
-                    <ul class="header__menu">
+                    <ul class="header__menu bold-text">
                         <li><a href="#">Women</a></li>
                         <li><a href="#">Men</a></li>
                         <li><a href="#">Handbags</a></li>
@@ -41,10 +42,10 @@
             </div>
             <div class="header__content_menu_search">
                 <button class="header__menu__search_button" id="searchTablet">
-                        <span class="header__menu_search_button_text">Style name...</span>
+                        <span class="header__menu_search_button_text bold-text">Style name...</span>
                         <img src="img/icons/search.svg" class="header__menu_search_button_img">
                     </button>
-                    <form id="searchDesktop" class="search__field">
+                    <form id="searchDesktop" class="search__field bold-text">
                         <input type="search" placeholder="Style Name">
                     </form>
             </div>
@@ -56,8 +57,9 @@
             <input type="checkbox" id="headerMenu">
             <label for="headerMenu">
                 <div class="header__content-logo-bag">
-                    <div class="header__content-logo"><a href="" class="header__logo" id="logoMobile">TL</a></div>
-                    <div class="header__content-bag"> <img src="img/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon">  Bag (0)</div>
+                    <h1 class="header__content-logo"><a href="start.html" class="header__logo" id="logoMobile">TL</a></h1>
+                    <a href="shopping-bag.html"><div class="header__content-bag">
+                    <img src="img/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon">  Bag (0)</div></a>
                 </div>
             </label>
 
@@ -65,7 +67,7 @@
                 <div class="burger-line second"></div>
                 <div class="burger-line third"></div>
                 <div class="burger-line fourth"></div>
-            <nav class="header__menu-nav ">
+            <nav class="header__menu-nav bold-text">
                 <div class="container">
                 <a href="#">Women</a>
                 <a href="#">Men</a>
@@ -90,12 +92,12 @@
     <section class="section__banner section_row container__promo-blocks">
         <div class="banner" id="firstBanner">
           <a href="item.html"> <img src="img/banner_1.jpeg" alt="red_nike" class="banner__img"></a>
-            <a href="item.html"> <div class="title__banner-name">Nike Red</div></a>
+            <a href="item.html"> <div class="title__banner-name bold-text">Nike Red</div></a>
         </div>
         <div class="banner" id="secondBanner">
             <a href="catalog.html"> <img src="img/banner_2.jpeg" alt="Caps & Hats" class="banner__img"></a>
-            <a href="catalog.html">  <div class="title__banner-name">Caps & Hats
-                <div class="subtitle__banner-name">Sale -50%</div>
+            <a href="catalog.html">  <div class="title__banner-name bold-text">Caps & Hats
+                <div class="subtitle__banner-name italic-text">Sale -50%</div>
             </div>
             </a>
         </div>
@@ -105,8 +107,8 @@
 
     <section class="section__best-offer container">
         <div class="section__best-offer_info">
-            <span class="title">Best offer</span>
-            <p class="subtitle">
+            <span class="title bold-text">Best offer</span>
+            <p class="subtitle italic-text">
                 This offer is valid in-store and online.
                 Prices displayed reflect this additional discount.
                 This offer ends at 11:59 GMT on March 1st 2019
@@ -118,7 +120,7 @@
                 <span class="item__arrow item__arrow_up"></span>
                 <div class="item__picture_container">
                     <img src="img/skinny_jeans.jpeg" alt="Only Skinny Jeans" class="item__picture">
-                    <div class="item__picture_hover-text">View item</div>
+                    <div class="item__picture_hover-text bold-text">View item</div>
                 </div>
                 <div class="item__info">
                     <p class="item__title">Only Skinny Jeans</p>
@@ -166,62 +168,17 @@
 
     </section>
     <div class="separator"></div>
-    <section class="section__new-arrivals container">
+    <section class="section__new-arrivals">
 
         <div class="section__new-arrivals_info">
-            <span class="title ">New arrivals</span>
-        </div>
+            <span class="title bold-text">New arrivals</span></div>
 
-        <div class="section__new-arrivals_items_grid-container">
-            <div class="item center-column" id="item1NewArrivals">
-                <div class="item__picture_container">
-                    <img src="img/skinny_jeans.jpeg" alt="Only Skinny Jeans" class="item__picture">
-                    <div class="item__picture_hover-text">View item</div>
-                </div>
-                <div class="item__info">
-                    <p class="item__title">Only Skinny Jeans</p>
-                    <p class="item__price">£65.50</p></div>
-            </div>
-
-            <div class="item center-column" id="item2NewArrivals">
-                <div class="item__picture_container">
-                    <img src="img/knitted_jumper.jpeg" alt="Neck Knitted Jumper" class="item__picture">
-                    <div class="item__picture_hover-text">View item</div>
-                </div>
-                <div class="item__info">
-                    <p class="item__title">Neck Knitted Jumper</p>
-                    <p class="item__price">£76.25</p>
-                </div>
-            </div>
-
-            <div class="item center-column" id="item3NewArrivals">
-                <div class="item__picture_container">
-                    <img src="img/turtle_jumper.jpeg" alt="Turtle Neck Jumper in Rib" class="item__picture">
-                    <div class="item__picture_hover-text">View item</div>
-                </div>
-                <div class="item__info">
-                    <p class="item__title">Turtle Neck Jumper in Rib</p>
-                    <p class="item__price">£130.25</p>
-                </div>
-            </div>
-
-            <div class="item center-column" id="item4NewArrivals">
-                <div class="item__picture_container">
-                    <img src="img/crochet.jpeg" alt="With Patchwork Crochet" class="item__picture">
-                    <div class="item__picture_hover-text">View item</div>
-                </div>
-                <div class="item__info">
-                    <p class="item__title">With Patchwork Crochet</p>
-                    <p class="item__price">£130.25</p>
-                </div>
-            </div>
-
-        </div>
-        </div>
+        <div class="container" id="goodsContainer"></div>
 
         <div class="center-column">
-            <button class=" section__button button_new-arrivals">All arrivals</button>
+           <a href="catalog.html"> <button  class=" section__button button__central">All arrivals</button></a>
         </div>
+
     </section>
     <div class="separator"></div>
 </main>
@@ -233,7 +190,7 @@
         <div class="footer__section-links ">
             <div class="section_row footer__section-links_first_column">
                 <div class="section_column footer__first_column">
-                    <p class="footer__column__title ">Quick Links</p>
+                    <h2 class="footer__column__title ">Quick Links</h2>
                     <ul class="footer__column__list">
                         <li><a href="#">Store locator</a></li>
                         <li><a href="#">Gift Cards</a></li>
@@ -244,7 +201,7 @@
                     </ul>
                 </div>
                 <div class="section_column footer__section_column_right">
-                    <p class="footer__column__title ">Customer Care</p>
+                    <h2 class="footer__column__title ">Customer Care</h2>
                     <ul class="footer__column__list">
                         <li><a href="#">Customer service</a></li>
                         <li><a href="#">Track my order</a></li>
@@ -263,7 +220,7 @@
 
             <div class="footer__section-feedback_direction" >
                 <div class="section_column footer__first_column feedback-column " id="border">
-                    <p class="footer__column__title ">Questions</p>
+                    <h2 class="footer__column__title ">Questions</h2>
 
                     <p class="footer__column_info " id="footerColumnInfoTweeter">
                         <img src="img/icons/twi_icon_grey.svg" class="footer__icon">Tweet us
@@ -271,12 +228,12 @@
                 </div>
 
                 <div class="section_column feedback-column footer__section_column_right">
-                    <p class="footer__column__title ">Order by phone</p>
+                    <h2 class="footer__column__title ">Order by phone</h2>
                     <p class="footer__column_info">8-800-409-47-12</p>
                 </div>
             </div>
 
-            <div class="footer__column__info_delivery">
+            <div class="footer__column__info_delivery italic-text">
                 We have our own delivery service
                 which operates in 23 major European cities.
                 Delivery time - 3-5 days.
@@ -302,7 +259,7 @@
             <span class="copyright"> © 2010–2015, The Template Group inc.</span>
         </div>
         <div class="section__sharing">
-            <span class="footer__share-icon">Share</span>
+            <span class="footer__share-icon bold-text">Share</span>
             <div class="section__sharing_image">
                 <img src="img/icons/share.svg" class="footer_share_img">
                 <div class="share_text">1437</div>
@@ -350,7 +307,30 @@
     </div>
 
 </footer>
-
+<script src="js/lodash.js"></script>
+<script src="js/start.js"></script>
+<script id="template-good-item" type="text/template">
+    <a href="item.html">
+        <div class="item">
+            <div class="item__picture_container center-column">
+                <div class="item__picture-wrapper">
+                    <img src="<%- thumbnail %>" alt="Image" class="item__picture">
+                    <% if (hasNew){ %>
+                    <div class="item__picture-hasNew"><span>NEW</span></div>
+                    <% } %>
+                </div>
+                <div class="item__picture_hover-text bold-text">View item</div>
+                <div class="item__info">
+                    <div class="item__title"><%-title%></div>
+                    <p class="item__price">£<%-price%></p>
+                </div>
+            </div>
+        </div>
+    </a>
+</script>
 </body>
-<script src="dist/lodash.js"></script>
+<script src="data/catalog.js"></script>
+<script src="dist/data-source.js"></script>
+<script src="dist/card-good.js"></script>
+<script src="dist/start.js"></script>
 </html>

@@ -5,8 +5,8 @@ const MAX_COLUMNS_COUNT_MOBILE = 2;
 const MAX_COLUMNS_COUNT_TABLET = 3;
 const MAX_COLUMNS_COUNT_DESKTOP = 4;
 
-const WIDTH_PHONE = 768;
-const WIDTH_TABLET = 1024;
+const WIDTH_PHONE = 767;
+const WIDTH_TABLET = 1025;
 
 function createCard(template, good) {
     let data = {

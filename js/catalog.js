@@ -1,3 +1,6 @@
+
+'use strict';
+
 const PAGE_SIZE_MOBILE = 8;
 const PAGE_SIZE_TABLET = 12;
 const PAGE_SIZE_DESKTOP = 12;
