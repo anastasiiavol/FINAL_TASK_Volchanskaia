@@ -17,8 +17,8 @@
                 </div>
                 <div class="header__content-bag">
                     <span class="header__content_bag-sing-up" id="signUp">E-mail sing up</span>
-                    <a href="shopping-bag.html"> <span> <img src="img/icons/ico_bag.svg" alt="bag"
-                                                             class="header__content_bag-icon">  Bag (0) </span></a>
+                    <a href="shopping-bag.html"> <span id="totalPrice"> <img src="img/icons/ico_bag.svg" alt="bag"
+                                                             class="header__content_bag-icon">  Bag(0) </span></a>
                 </div>
             </div>
 
@@ -95,6 +95,7 @@
         <span>Shopping Bag</span>
     </div>
     <div class="separator"></div>
+    1
     <div class="container">
         <div id="goodsContainer" class="container-bag"></div>
     </div>
@@ -104,13 +105,15 @@
     </div>
 
     <div class="shopping-bag_checkout bold-text container">
-        <div class="shopping-bag_clear">Empty Bag</div>
+        <div class="shopping-bag_clear" id="emptyBag">Empty Bag</div>
 
-        <div class="shopping-bag_btn"><a href="catalog.html"> <button  class=" section__button">Checkout</button></a></div>
+        <div class="shopping-bag_btn"><a href="catalog.html">
+            <button class=" section__button">Checkout</button>
+        </a></div>
 
         <div class="shopping-bag_total-price">
-           <!-- <div class="shopping-bag_total-price-discount"><span>Applied discount: £15.00</span> </div>-->
-            <div class="shopping-bag_total-price-regular">Total price: </div>
+            <!-- <div class="shopping-bag_total-price-discount"><span>Applied discount: £15.00</span> </div>-->
+            <span class="shopping-bag_total-price-regular" id="totalPriceBottom">Total price:</span>
         </div>
     </div>
     <div class="separator"></div>
@@ -240,16 +243,14 @@
 
 </footer>
 
-<script src="js/lodash.js"></script>
-<script src="js/shopping-bag.js"></script>
 
 <script id="template-shopping-bag" type="text/template">
 
     <div class="bag__wrapper">
         <div>
             <div class="item__picture_container">
-                <div class="item__picture-wrapper">
-                    <a href="item.html"> <img src="<%- thumbnail %>" alt="Image" class="item__picture"> </a>
+                <div class="item__picture-wrapper" id="itemPictureWrapper">
+                    <img src="<%- thumbnail %>" alt="Image" class="item__picture"> </a>
                     <% if (hasNew){ %>
                     <div class="item__picture-hasNew"><span>NEW</span></div>
                     <% } %>
@@ -264,24 +265,27 @@
                 <p class="bag__item_price">£<%-price%></p>
             </div>
             <div class="bag__item__info-description">
-                <p class="bag__item_color">Color: </p>
-                <p class="bag__item_size">Size: </p>
+                <p class="bag__item_color">Color: <%-color%></p>
+                <p class="bag__item_size">Size: <%-size%></p>
                 <div class="bag__item_quantity">
                     <form>
                         <span>Quantity: </span>
-                        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
-                        <input type="number" id="number" value="0"/>
-                        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                        <div class="value-button" id="decrease" value="Decrease Value">-</div>
+                        <input type="number" id="number" value="<%=quantity%>"/>
+                        <div class="value-button" id="increase" value="Increase Value">+</div>
                     </form>
                 </div>
             </div>
-            <div class="bag__item__delete bold-text">Remove item</div>
+            <div class="bag__item__delete bold-text" id="removeItem">Remove item</div>
         </div>
 
     </div>
 
 </script>
 <script src="data/catalog.js"></script>
+<script src="dist/lodash.js"></script>
+<script src="dist/good.js"></script>
+<script src="dist/chosen-good.js"></script>
 <script src="dist/data-source.js"></script>
 <script src="dist/card-good.js"></script>
 <script src="dist/shopping-bag.js"></script>

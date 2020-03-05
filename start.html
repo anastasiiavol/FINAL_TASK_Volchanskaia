@@ -17,7 +17,8 @@
                 </div>
                 <div class="header__content-bag">
                     <span class="header__content_bag-sing-up" id="signUp">E-mail sing up</span>
-                    <a href="shopping-bag.html"> <span> <img src="img/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon">  Bag (0) </span></a>
+                    <a href="shopping-bag.html"> <span id="totalPrice">
+                        <img src="img/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon">  Bag (0) </span></a>
 
                 </div>
             </div>
@@ -307,8 +308,7 @@
     </div>
 
 </footer>
-<script src="js/lodash.js"></script>
-<script src="js/start.js"></script>
+
 <script id="template-good-item" type="text/template">
     <a href="item.html">
         <div class="item">
@@ -330,7 +330,11 @@
 </script>
 </body>
 <script src="data/catalog.js"></script>
+<script src="dist/lodash.js"></script>
+<script src="dist/good.js"></script>
+<script src="dist/chosen-good.js"></script>
 <script src="dist/data-source.js"></script>
 <script src="dist/card-good.js"></script>
+<script src="dist/shopping-bag.js"></script>
 <script src="dist/start.js"></script>
 </html>

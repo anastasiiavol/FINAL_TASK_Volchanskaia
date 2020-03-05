@@ -41,9 +41,3 @@ class DataSource {
 }
 
 var dataSource = new DataSource();
-
-/*
-dataSource.saveShoppingBag([]);
-let bag = dataSource.getShoppingBag();
-bag.push(new ChosenGood());
-*/

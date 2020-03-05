@@ -367,7 +367,7 @@ input[type=search] {
 }
 
 .item__info_radio input[type="radio"]:checked + label {
-    border-color: #bebebe;
+    border: 1px solid #bebebe;
 }
 
 .item__info_radio label {

@@ -16,6 +16,8 @@ window.onresize = () => {
     renderGoods(getGoods(), createBanner());
 };
 
+let goodTemplate = _.template(document.getElementById('template-good-item').innerHTML);
+
 function getGoods() {
     let goods = [...dataSource.getGoods()];
     goods = _.filter(goods, (good) => good.category.toLowerCase() === filterCategory.toLowerCase());
@@ -87,14 +89,12 @@ function renderGoods(goods, banner) {
 function createRows(rowsCount, columnsCount, goodsCount, goods) {
     let rows = [];
 
-    let template = _.template(document.getElementById('template-good-item').innerHTML);
-
     let goodIndex = 0;
     for (let row = 0; row < rowsCount; row++) {
         let cards = [];
         for (let column = 0; column < columnsCount && goodIndex < goodsCount; column++, goodIndex++) {
             let good = goods[goodIndex];
-            let card = createCard(template, good);
+            let card = createGoodCard(goodTemplate, good);
             cards.push(card);
         }
         rows.push(createRow(cards));

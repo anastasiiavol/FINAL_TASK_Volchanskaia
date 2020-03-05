@@ -8,12 +8,24 @@ let filterCategory = "women";
 let filterFashion = "casual style";
 let previousColumnsCount = 0;
 
+let goodTemplate = _.template(document.getElementById('template-good-item').innerHTML);
+
 window.onload = () => {
-    renderGoods(getGoods());
+    renderData()
 };
 window.onresize = () => {
-    renderGoods(getGoods());
+    renderData()
 };
+
+function renderData() {
+    renderBagStatus();
+    renderGoods(getGoods());
+}
+
+function renderBagStatus() {
+    let totalPrice = document.getElementById("totalPrice");
+    totalPrice.innerHTML = "Bag £" + shoppingBag.price + " (" + shoppingBag.size + ")";
+}
 
 function getGoods() {
     let goods = [...dataSource.getGoods()];
@@ -28,8 +40,6 @@ function clearContainer(container) {
         container.removeChild(container.firstChild)
     }
 }
-
-
 
 function renderGoods(goods, banner) {
     let columnsCount = defineColumnsCount();
@@ -56,14 +66,12 @@ function renderGoods(goods, banner) {
 function createRows(rowsCount, columnsCount, goodsCount, goods) {
     let rows = [];
 
-    let template = _.template(document.getElementById('template-good-item').innerHTML);
-
     let goodIndex = 0;
     for (let row = 0; row < rowsCount; row++) {
         let cards = [];
         for (let column = 0; column < columnsCount && goodIndex < goodsCount; column++, goodIndex++) {
             let good = goods[goodIndex];
-            let card = createCard(template, good);
+            let card = createGoodCard(goodTemplate, good);
             cards.push(card);
         }
         rows.push(createRow(cards));
