@@ -98,23 +98,22 @@ class ShoppingBag {
         let goods = dataSource.goods;
         for (let i = 0; i < goods.length; i++) {
             let good = goods[i];
-
-
-            if (good.id === id && good.sizes.includes(size) && good.colors.includes(color)) {
+    if(good.id === id && containsElem(good.sizes, size) && containsElem(good.colors, color)){
                 return ChosenGood.new(good, size, color);
             }
         }
         return null;
     }
 }
-/*function containsElem(arr, elem) {
+
+function containsElem(arr, elem) {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === elem) {
             return true;
         }
     }
     return false;
-}*/
+}
 let shoppingBag = new ShoppingBag();
 
 shoppingBag.clearAll();
@@ -131,17 +130,11 @@ window.onload = () => {
         shoppingBag.clearAll();
         renderData();
 
-        let message = document.getElementById('goodsContainerTextMessage');
-        let messageContainer = document.createElement("span");
-        let messageText = document.createTextNode("Your shopping bag is empty. Use Catalog to add new items");
 
-        messageContainer.appendChild(messageText);
-        message.appendChild(messageContainer);
     });
     document.getElementById("checkout").addEventListener("click", () => {
         shoppingBag.clearAll();
         renderData();
-
         let message = document.getElementById('goodsContainerTextMessage');
         let messageContainer = document.createElement("span");
         let messageText = document.createTextNode("Thank you for your purchase");
@@ -151,6 +144,22 @@ window.onload = () => {
     });
     renderData();
 };
+function createTextMessage(){
+    let message = document.getElementById('goodsContainerTextMessage');
+    let messageContainer = document.createElement("span");
+    let messageText = document.createTextNode("Your shopping bag is empty. Use Catalog to add new items");
+
+    messageContainer.appendChild(messageText);
+    message.appendChild(messageContainer);
+}
+
+function renderMessage(){
+    if (shoppingBag.size ===0){
+        createTextMessage();
+    }else {
+        return shoppingBag;
+    }
+}
 
 window.onresize = () => {
     renderGoods(shoppingBag.chosen);
@@ -164,8 +173,11 @@ function clearContainer(container) {
 }
 
 function renderData() {
+
     renderGoods(shoppingBag.chosen);
     renderBagStatus();
+    renderMessage();
+
 }
 
 function renderBagStatus() {
