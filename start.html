@@ -17,8 +17,7 @@
                 </div>
                 <div class="header__content-bag">
                     <span class="header__content_bag-sing-up" id="signUp">E-mail sing up</span>
-                    <a href="shopping-bag.html"> <span id="totalPrice">
-                        <img src="img/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon">  Bag (0) </span></a>
+                    <a href="shopping-bag.html"> <span id="totalPrice" class="header__content_bag-total">Bag (0) </span></a>
 
                 </div>
             </div>
@@ -59,8 +58,8 @@
             <label for="headerMenu">
                 <div class="header__content-logo-bag">
                     <h1 class="header__content-logo"><a href="start.html" class="header__logo" id="logoMobile">TL</a></h1>
-                    <a href="shopping-bag.html"><div class="header__content-bag">
-                    <img src="img/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon">  Bag (0)</div></a>
+                    <a href="shopping-bag.html"> <span id="totalPriceMobile" class="header__content_bag-total">  Bag (0) </span></a>
+
                 </div>
             </label>
 
@@ -116,13 +115,13 @@
             </p>
         </div>
 
-        <div class=" section__best-offer_items_grid-container ">
+        <div class=" section__best-offer_items_container ">
             <div class="item center-column">
                 <span class="item__arrow item__arrow_up"></span>
-                <div class="item__picture_container">
+                <a href="item.html"> <div class="item__picture_container">
                     <img src="img/skinny_jeans.jpeg" alt="Only Skinny Jeans" class="item__picture">
                     <div class="item__picture_hover-text bold-text">View item</div>
-                </div>
+                </div></a>
                 <div class="item__info">
                     <p class="item__title">Only Skinny Jeans</p>
                     <p class="item__price">£65.50</p></div>
@@ -135,10 +134,10 @@
 
             <div class="item center-column">
                 <span class="item__arrow item__arrow_up"></span>
-                <div class="item__picture_container">
+              <a href="item.html">  <div class="item__picture_container">
                     <img src="img/levis.jpeg" alt="Levi’s Jeans for women" class="item__picture">
-                    <div class="item__picture_hover-text">View item</div>
-                </div>
+                    <div class="item__picture_hover-text bold-text">View item</div>
+                </div></a>
                 <div class="item__info">
                     <p class="item__title">Levi’s Jeans for women</p>
                     <p class="item__price">£95.50</p></div>
@@ -148,15 +147,18 @@
                 =
             </div>
 
-            <div class="container section__best-offer_items-price center-column" id="bestOfferDesktop">
+            <div class=" section__best-offer_items-price center-column" id="bestOfferDesktop">
                 <span class="items-price_old_line"></span>
                 <span class="items-price_old "> £161.00</span>
                 <span class="items-price_new">£146.00</span>
-                <button class=" section__button button_buy-now">Add to bag</button>
+             <a href="shopping-bag.html">  <button class=" section__button button_buy-now " id="bestOfferBtnTablet">Add to bag</button></a>
             </div>
 
         </div>
+<div class="button_buy-now-tablet">
+    <a href="shopping-bag.html">  <button class=" section__button button_buy-now ">Add to bag</button></a>
 
+</div>
         <div class="section__best-offer_items-price-mobile">
             <div class="container section__best-offer_items-price center-column">
                 <span class="items-price_old_line"></span>

@@ -16,7 +16,8 @@
                 </div>
                 <div class="header__content-bag">
                     <span class="header__content_bag-sing-up" id="signUp">E-mail sing up</span>
-                    <a href="shopping-bag.html"> <span> <img src="img/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon">  Bag (0) </span></a>
+                    <a href="shopping-bag.html"> <span id="totalPrice" class="header__content_bag-total">Bag (0) </span></a>
+
 
                 </div>
             </div>
@@ -57,9 +58,8 @@
             <label for="headerMenu">
                 <div class="header__content-logo-bag">
                     <h1 class="header__content-logo"><a href="start.html" class="header__logo" id="logoMobile">TL</a></h1>
-                    <a href="shopping-bag.html"><div class="header__content-bag"><img src="img/icons/ico_bag.svg" alt="bag"
-                                                          class="header__content_bag-icon"> Bag (0)
-                    </div></a>
+                    <a href="shopping-bag.html"> <span id="totalPriceMobile" class="header__content_bag-total">  Bag (0) </span></a>
+
                 </div>
             </label>
 
@@ -470,8 +470,12 @@
 
 </body>
 <script src="data/catalog.js"></script>
+<script src="dist/lodash.js"></script>
+<script src="dist/good.js"></script>
+<script src="dist/chosen-good.js"></script>
 <script src="dist/data-source.js"></script>
 <script src="dist/card-good.js"></script>
+<script src="dist/shopping-bag.js"></script>
 <script src="dist/catalog.js"></script>
 </html>
 

@@ -11,10 +11,20 @@ let previousColumnsCount = 0;
 
 window.onload = () => {
     renderGoods(getGoods(), createBanner());
+    renderBagStatus()
 };
 window.onresize = () => {
     renderGoods(getGoods(), createBanner());
+    renderBagStatus()
 };
+
+function renderBagStatus() {
+    let totalPrice = document.getElementById("totalPrice");
+    let totalPriceMobile = document.getElementById("totalPriceMobile");
+    totalPrice.innerHTML = "Bag £" + shoppingBag.price + " (" + shoppingBag.size + ")";
+    totalPriceMobile.innerHTML = "Bag £" + shoppingBag.price + " (" + shoppingBag.size + ")";
+}
+
 
 let goodTemplate = _.template(document.getElementById('template-good-item').innerHTML);
 

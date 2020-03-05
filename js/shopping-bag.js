@@ -62,6 +62,7 @@ class ShoppingBag {
         dataSource.saveShoppingBag(chosenGoods);
     }
 
+
     unchooseAllGoodItems(id, size, color) {
         let chosenGoods = this.chosen;
         let chosenGood = this.fromBag(chosenGoods, id, size, color);
@@ -69,7 +70,7 @@ class ShoppingBag {
             return;
         }
         let index = chosenGoods.indexOf(chosenGood);
-        chosenGoods.remove(index);
+        chosenGoods.splice(index, 1);
         dataSource.saveShoppingBag(chosenGoods);
     }
 
@@ -92,10 +93,13 @@ class ShoppingBag {
         return null;
     }
 
+
     fromDataSource(id, size, color) {
         let goods = dataSource.goods;
         for (let i = 0; i < goods.length; i++) {
             let good = goods[i];
+
+
             if (good.id === id && good.sizes.includes(size) && good.colors.includes(color)) {
                 return ChosenGood.new(good, size, color);
             }
@@ -103,7 +107,14 @@ class ShoppingBag {
         return null;
     }
 }
-
+/*function containsElem(arr, elem) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === elem) {
+            return true;
+        }
+    }
+    return false;
+}*/
 let shoppingBag = new ShoppingBag();
 
 shoppingBag.clearAll();
@@ -119,11 +130,31 @@ window.onload = () => {
     document.getElementById("emptyBag").addEventListener("click", () => {
         shoppingBag.clearAll();
         renderData();
+
+        let message = document.getElementById('goodsContainerTextMessage');
+        let messageContainer = document.createElement("span");
+        let messageText = document.createTextNode("Your shopping bag is empty. Use Catalog to add new items");
+
+        messageContainer.appendChild(messageText);
+        message.appendChild(messageContainer);
+    });
+    document.getElementById("checkout").addEventListener("click", () => {
+        shoppingBag.clearAll();
+        renderData();
+
+        let message = document.getElementById('goodsContainerTextMessage');
+        let messageContainer = document.createElement("span");
+        let messageText = document.createTextNode("Thank you for your purchase");
+
+        messageContainer.appendChild(messageText);
+        message.appendChild(messageContainer);
     });
     renderData();
 };
+
 window.onresize = () => {
     renderGoods(shoppingBag.chosen);
+
 };
 
 function clearContainer(container) {
@@ -138,6 +169,9 @@ function renderData() {
 }
 
 function renderBagStatus() {
+    let totalPriceMobile = document.getElementById("totalPriceMobile");
+    totalPriceMobile.innerHTML = "Bag £" + shoppingBag.price + " (" + shoppingBag.size + ")";
+
     let totalPrice = document.getElementById("totalPrice");
     let totalPriceBottom = document.getElementById("totalPriceBottom");
     totalPrice.innerHTML = "Bag £" + shoppingBag.price + " (" + shoppingBag.size + ")";
@@ -176,10 +210,12 @@ function createRows(rowsCount, columnsCount, goodsCount, goods) {
                     renderData();
                 },
                 (good) => {
-                    //TODO: increment quantity
+                    shoppingBag.chooseGood(good.id, good.size, good.color);
+                    renderData();
                 },
                 (good) => {
-                    //TODO: remove item
+                    shoppingBag.unchooseAllGoodItems(good.id, good.size, good.color);
+                    renderData();
                 },
                 (good) => {
                     document.location.href = "item.html";

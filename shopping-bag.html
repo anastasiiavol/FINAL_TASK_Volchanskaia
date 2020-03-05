@@ -17,8 +17,7 @@
                 </div>
                 <div class="header__content-bag">
                     <span class="header__content_bag-sing-up" id="signUp">E-mail sing up</span>
-                    <a href="shopping-bag.html"> <span id="totalPrice"> <img src="img/icons/ico_bag.svg" alt="bag"
-                                                             class="header__content_bag-icon">  Bag(0) </span></a>
+                    <a href="shopping-bag.html"> <span id="totalPrice" class="header__content_bag-total">Bag (0) </span></a>
                 </div>
             </div>
 
@@ -60,9 +59,8 @@
                     <h1 class="header__content-logo"><a href="start.html" class="header__logo" id="logoMobile">TL</a>
                     </h1>
                     <a href="shopping-bag.html">
-                        <div class="header__content-bag">
-                            <img src="img/icons/ico_bag.svg" alt="bag" class="header__content_bag-icon"> Bag (0)
-                        </div>
+                        <a href="shopping-bag.html"> <span id="totalPriceMobile" class="header__content_bag-total">  Bag (0) </span></a>
+
                     </a>
                 </div>
             </label>
@@ -95,9 +93,9 @@
         <span>Shopping Bag</span>
     </div>
     <div class="separator"></div>
-    1
-    <div class="container">
+    <div class="container container-bag__wrapper">
         <div id="goodsContainer" class="container-bag"></div>
+        <div id="goodsContainerTextMessage" class="container-bag__text bold-text"></div>
     </div>
     <div class="separator"></div>
     <div class="shopping-bag_banner bold-text"><span class="shopping-bag_banner-text container">You've qualified for Free UK Next Day Delivery on your order.
@@ -107,9 +105,9 @@
     <div class="shopping-bag_checkout bold-text container">
         <div class="shopping-bag_clear" id="emptyBag">Empty Bag</div>
 
-        <div class="shopping-bag_btn"><a href="catalog.html">
-            <button class=" section__button">Checkout</button>
-        </a></div>
+        <div class="shopping-bag_btn">
+            <button class=" section__button" id="checkout">Checkout</button>
+        </div>
 
         <div class="shopping-bag_total-price">
             <!-- <div class="shopping-bag_total-price-discount"><span>Applied discount: £15.00</span> </div>-->

@@ -24,8 +24,11 @@ function renderData() {
 
 function renderBagStatus() {
     let totalPrice = document.getElementById("totalPrice");
+    let totalPriceMobile = document.getElementById("totalPriceMobile");
     totalPrice.innerHTML = "Bag £" + shoppingBag.price + " (" + shoppingBag.size + ")";
+    totalPriceMobile.innerHTML = "Bag £" + shoppingBag.price + " (" + shoppingBag.size + ")";
 }
+
 
 function getGoods() {
     let goods = [...dataSource.getGoods()];
